@@ -4,13 +4,14 @@ import sidebar from "./sidebar.js";
 import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
+  custom: true,
   hostname: "#",
   author: {
     name: "Chigusa",
     url: "https://ayanime.me/",
   },
 
-  iconAssets: "fontawesome-with-brands","fontawsome",
+  iconAssets: "fontawesome-with-brands",
 
   logo: "https://ayanime.me/wp-content/uploads/2024/03/cropped-Ayanime-Logo-512.png",
 
