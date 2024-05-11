@@ -23,7 +23,11 @@ export default hopeTheme({
   navbar,
 
   // sidebar
-  sidebar,
+  sidebar: {
+		"/anime/" :"structure",
+		"/posts/" :"structure",
+		"/demo/"  :"structure",
+  },
 
   footer: "Default footer",
 

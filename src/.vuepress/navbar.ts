@@ -3,8 +3,8 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   "/portfolio",
-  "/demo/",
-  {
+  //"/demo/",
+  /*{
     text: "Posts",
     icon: "pen-to-square",
     prefix: "/posts/",
@@ -44,7 +44,7 @@ export default navbar([
       "tomato",
       "strawberry",
     ],
-  },
+  },*/
   { text: "Jadwal Release", icon: "clock", link: "#"},
-  { text: "Daftar Anime", icon: "folder", link: "#"},
+  { text: "Daftar Anime", icon: "folder", link: "/anime/"},
 ]);
