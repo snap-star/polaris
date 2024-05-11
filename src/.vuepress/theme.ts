@@ -75,7 +75,6 @@ export default hopeTheme({
        serverURL: "https://waline-test-et2fj13yo-polaris-projects-3218ad07.vercel.app/",
      },
 	
-	search: true,
 		search: {
 		searchMaxSuggestions: 10
     },
