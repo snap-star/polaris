@@ -13,7 +13,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  logo: "https://ayanime.me/wp-content/uploads/2024/03/cropped-Ayanime-Logo-512.png",
 
   repo: "buffedcream/polar-stream",
 

@@ -8,7 +8,7 @@ avatar: https://ayanime.me/wp-content/uploads/2024/05/undefined_image.png
 
 titles:
   - Genius young Lady
-  - Love Guns
+  - Developer Wannabe
   - Love Anime and Eats
 
 content: true
