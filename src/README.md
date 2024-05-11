@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: Anime Release
-heroImage: 
+heroImage: #
 heroText: Ayanime
 tagline: Nonton Streaming Anime Subtitle Indonesia Gratis
 heroFullScreen: false
