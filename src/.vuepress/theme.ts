@@ -7,15 +7,15 @@ export default hopeTheme({
   hostname: "https://mister-hope.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Chigusa",
+    url: "https://ayanime.me/",
   },
 
   iconAssets: "fontawesome-with-brands",
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "buffedcream/polar-stream",
 
   docsDir: "src",
 
@@ -36,7 +36,7 @@ export default hopeTheme({
   },
 
   blog: {
-    description: "A FrontEnd programmer",
+    description: "Just love anime",
     intro: "/intro.html",
     medias: {
       Baidu: "https://example.com",

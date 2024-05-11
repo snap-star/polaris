@@ -1,8 +1,8 @@
 ---
 icon: circle-info
-cover: /assets/images/cover3.jpg
+cover: https://ayanime.me/wp-content/uploads/2024/02/cropped-ayanime-high-resolution-logo-transparent.png
 ---
 
 # Intro Page
 
-Place your introduction and profile here.
+Hey hope you enjoy watching anime here
