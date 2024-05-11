@@ -28,7 +28,7 @@ export default hopeTheme({
 		"/demo/"  :"structure",
   },
 
-  footer: "Default footer",
+  footer: "Disclaimer : This site Ayanime does not store any files on its server. All contents are provided by non-affiliated third parties",
 
   displayFooter: true,
 
