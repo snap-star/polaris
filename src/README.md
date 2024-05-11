@@ -6,7 +6,7 @@ title: Home
 heroImage: #
 heroText: Ayanime
 tagline: Nonton Streaming Anime Subtitle Indonesia Gratis
-heroFullScreen: false
+heroFullScreen: true
 projects:
   - icon: project
     name: Daftar Anime

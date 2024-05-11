@@ -10,7 +10,7 @@ export default hopeTheme({
     url: "https://ayanime.me/",
   },
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: "fontawesome-with-brands","fontawsome",
 
   logo: "https://ayanime.me/wp-content/uploads/2024/03/cropped-Ayanime-Logo-512.png",
 

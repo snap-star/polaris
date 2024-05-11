@@ -6,6 +6,6 @@ tags: adventure
 star: true
 ---
 
-# One Piece Episode 1200
+# Episode 1200
 
 This is content
