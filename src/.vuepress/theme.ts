@@ -31,7 +31,7 @@ export default hopeTheme({
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["1234"],
+      "/demo/encrypt.html": ["Hidden#1"],
     },
   },
 
@@ -59,7 +59,7 @@ export default hopeTheme({
   },
 
   // enable it to preview all changes in time
-  // hotReload: true,
+   hotReload: true,
 
   plugins: {
     blog: true,
