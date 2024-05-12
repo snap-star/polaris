@@ -92,6 +92,7 @@ export default hopeTheme({
       component: true,
       demo: true,
       figure: true,
+	  hint: true,
       imgLazyload: true,
       imgSize: true,
       include: true,
