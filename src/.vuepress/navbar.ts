@@ -45,6 +45,6 @@ export default navbar([
       "strawberry",
     ],
   },*/
-  { text: "Jadwal Release", icon: "clock", link: "#"},
+  { text: "Jadwal Release", icon: "clock", link: "/jadwal-release/"},
   { text: "Daftar Anime", icon: "folder", link: "/anime/"},
 ]);
