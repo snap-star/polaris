@@ -22,8 +22,7 @@
     "@vuepress/plugin-pwa": "^2.0.0-rc.28",
     "reveal.js": "^5.1.0"
   },
-  {
   "scripts": {
     "build": "[dist] build --output public"
-  }
+  },
 }
