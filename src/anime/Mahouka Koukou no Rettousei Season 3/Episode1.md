@@ -1,8 +1,12 @@
 ---
 date: 2024-05-13
-tag: em
+icon: film
+tag:
+ - Action
+ - School
+ - Supernatural
 ---
 
-# Episode 1 <Badge text="New" type="tip" />
+# Episode 1
 
 This Is Content
