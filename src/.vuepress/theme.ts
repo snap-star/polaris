@@ -73,7 +73,7 @@ export default hopeTheme({
     // You MUST generate and use your own comment service in production.
      comment: {
        provider: "Waline",
-       serverURL: "https://waline-test-et2fj13yo-polaris-projects-3218ad07.vercel.app/",
+       serverURL: "https://waline-test-ashen-chi.vercel.app/",
      },
 	
 		search: {
