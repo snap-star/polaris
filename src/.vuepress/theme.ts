@@ -26,6 +26,7 @@ export default hopeTheme({
   sidebar {
 		"/anime/" :"structure",
 		"/posts/" :"structure",
+	  	"/demo/"  :"structure",
   },
 
   footer: "Disclaimer : This site Ayanime does not store any files on its server. All contents are provided by non-affiliated third parties",
