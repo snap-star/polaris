@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "@vuepress/plugin-pwa": "^2.0.0-rc.28",
-    "reveal.js": "^5.1.0"
+    "artplayer": "^5.1.1",
+    "reveal.js": "^5.1.0",
+    "vidstack": "^1.11.21"
   }
 }

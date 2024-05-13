@@ -80,7 +80,7 @@ export default hopeTheme({
 		searchMaxSuggestions: 10
     },
     components: {
-      components: ["Badge", "VPCard"],
+      components: ["Badge", "VPCard", "ArtPlayer", "Share","SiteInfo","VPBanner","VidStack"],
     },
 
     // These features are enabled for demo, only preserve features you need here
