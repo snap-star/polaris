@@ -22,5 +22,9 @@ export default sidebar({
       icon: "person-chalkboard",
       link: "https://plugin-md-enhance.vuejs.press/guide/content/revealjs/demo.html",
     },
+    {
+		"/anime/" :"structure",
+		"/posts/" :"structure",
+  },
   ],
 });
