@@ -5,7 +5,7 @@ import { POLAR_STAR } from "./logo.js";
 
 export default hopeTheme({
   custom: true,
-  hostname: "buffedcrea.github.io",
+  hostname: "buffedcream.github.io",
   author: {
     name: "Chigusa",
     url: "https://ayanime.me/",
