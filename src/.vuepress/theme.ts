@@ -5,7 +5,7 @@ import { POLAR_STAR } from "./logo.js";
 
 export default hopeTheme({
   custom: true,
-  hostname: "polar-stream.vercel.app",
+  hostname: "buffedcrea.github.io",
   author: {
     name: "Chigusa",
     url: "https://ayanime.me/",
