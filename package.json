@@ -9,6 +9,7 @@
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:dev": "vuepress-vite dev src",
     "docs:update-package": "npx vp-update"
+    "build": "[my-framework] build --output public"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.9",
@@ -22,7 +23,4 @@
     "@vuepress/plugin-pwa": "^2.0.0-rc.28",
     "reveal.js": "^5.1.0"
   },
-  "scripts": {
-    "build": "npm build --output public"
-  }
 }
