@@ -22,8 +22,11 @@ export default hopeTheme({
   // navbar
   navbar,
 
-  // sidebar
-  sidebar,
+  // sidebar:
+  sidebar {
+		"/anime/" :"structure",
+		"/posts/" :"structure",
+  },
 
   footer: "Disclaimer : This site Ayanime does not store any files on its server. All contents are provided by non-affiliated third parties",
 
