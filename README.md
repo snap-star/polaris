@@ -1,9 +1,9 @@
 # Usage and Installation
 
-## dev run
+## dev  server
 npm run docs:dev
 
-## build run
+## build
 npm run docs:build
 
 ## update packaging
