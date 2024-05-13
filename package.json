@@ -23,6 +23,6 @@
     "reveal.js": "^5.1.0"
   },
   "scripts": {
-    "build": "[my-framework] build --output public"
+    "build": "npm build --output public"
   }
 }
