@@ -1,6 +1,6 @@
 ---
 home: true
-portofolio: true
+portfolio: true
 title: Profile
 icon: circle-info
 name: Rendi Yuspramana Putra
