@@ -79,7 +79,6 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard", "ArtPlayer", "Share","SiteInfo","VPBanner","VidStack"],
     },
-
     // These features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
@@ -96,6 +95,7 @@ export default hopeTheme({
       mark: true,
       plantuml: true,
       spoiler: true,
+      revealJs: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -143,9 +143,9 @@ export default hopeTheme({
        },
 
       // install reveal.js before enabling it
-       revealJs: {
-         plugins: ["highlight", "math", "search", "notes", "zoom"],
-       },
+      //revealJs: {
+      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
+      //},
 
       // install @vue/repl before enabling it
        vuePlayground: true,

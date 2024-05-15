@@ -10,7 +10,6 @@ titles:
   - Cuma Karyawan
   - Developer Wannabe
   - Kopi + Rokok = Menyala
-
 content: true
 footer: false
 ---
