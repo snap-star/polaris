@@ -5,15 +5,16 @@ import { POLAR_STAR } from "./logo.js";
 
 export default hopeTheme({
   custom: true,
+  fullscreen: true,
   hostname: "buffedcream.github.io",
   author: {
-    name: "Chigusa",
+    name: "Polaris",
     url: "https://ayanime.me/",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://ayanime.me/wp-content/uploads/2024/03/cropped-Ayanime-Logo-512.png",
+  logo: "./logo.png",
 
   repo: "buffedcream/polar-stream",
 
@@ -36,7 +37,7 @@ export default hopeTheme({
   },
 
   blog: {
-    description: "Just love anime",
+    description: "Halo!",
     intro: "/intro.html",
     medias: {
       Discord: "https://example.com",
@@ -47,7 +48,7 @@ export default hopeTheme({
       Instagram: "https://example.com",
       Lines: "https://example.com",
       Linkedin: "https://example.com",
-      Rss: "https://example.com",
+      Rss: "https://polar-stream.vercel.app/rss",
       Steam: "https://example.com",
       Twitter: "https://example.com",
       Whatsapp: "https://example.com",
@@ -123,10 +124,10 @@ export default hopeTheme({
       // echarts: true,
 
       // install flowchart.ts before enabling it
-      // flowchart: true,
+       flowchart: true,
 
       // gfm requires mathjax-full to provide tex support
-      // gfm: true,
+       gfm: true,
 
       // install katex before enabling it
       // katex: true,
@@ -137,9 +138,9 @@ export default hopeTheme({
       // install mermaid before enabling it
       // mermaid: true,
 
-      // playground: {
-      //   presets: ["ts", "vue"],
-      // },
+       playground: {
+         presets: ["ts", "vue", "js", "html", "css"],
+       },
 
       // install reveal.js before enabling it
        revealJs: {
@@ -147,12 +148,12 @@ export default hopeTheme({
        },
 
       // install @vue/repl before enabling it
-      // vuePlayground: true,
+       vuePlayground: true,
 
       // install sandpack-vue3 before enabling it
       // sandpack: true,
     },
-
+    
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
      pwa: {
        favicon: "/favicon.ico",
