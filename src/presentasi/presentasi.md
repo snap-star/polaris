@@ -43,7 +43,7 @@ layout: Slide
 
 ## Konsep
 
-`Web ini dibangun diatas vue.js, kerangka JavaScript populer untuk membangun antarmuka pengguna. Tidak seperti platform CMS tradisional seperti WordPress, VuePress menghasilkan file HTML statis untuk setiap halaman situs web selama proses pembuatan.`
+`Web ini dibangun diatas vue.js, kerangka JavaScript populer untuk membangun antarmuka pengguna. Tidak seperti platform CMS tradisional seperti WordPress, Vue.js menghasilkan file HTML statis untuk setiap halaman situs web selama proses pembuatan.`
 
 <!-- .element: class="r-fit-text" -->
 
