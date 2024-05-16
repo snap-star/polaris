@@ -23,4 +23,4 @@ heroFullScreen: false
 #     desc: Anime - Movie
 #     link: /anime/movie/
 	
-footer: "Disclaimer : This site Ayanime does not store any files on its server. All contents are provided by non-affiliated third parties"
+footer: "Disclaimer : This site Polaris does not store any files on its server. All contents are provided by non-affiliated third parties"

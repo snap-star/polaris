@@ -8,437 +8,157 @@ layout: Slide
 
 @slidestart
 
-<!-- .slide: data-transition="slide" -->
+<!-- .slide: data-transition="slide" data-auto-animate -->
 
 # Polaris
-## Wordpress with Vue.js
+
+## Integrasi Web berbasis Vue.js 
+> Vue.js + Wordpress + API
+
+
 
 <!-- .element: class="r-fit-text" -->
 
-Headless Wordpress
+--
 
-<!-- .element: class="r-fit-text" -->
+## Latar Belakang
 
-> Simple Presentation with Vue.js.
-Gunakan Scroll Mouse Kebawah Untuk Melanjutkan 
+ Dalam lanskap pengembangan web yang berkembang pesat, permintaan akan alat yang efisien dan fleksibel terus meningkat.
+ 
+ Sistem manajemen konten (CMS) seperti WordPress telah lama menjadi pilihan populer untuk membangun situs web dan blog karena kemudahan penggunaannya dan ekosistem plugin dan dukungan komunitas yang luas.
+
+
+--
+
+## 
+ Di sisi lain, bahasa pemrograman JavaScript modern seperti Vue.js telah diadopsi secara luas karena kesederhanaan dan kinerjanya. 
+ 
+ Bagaimana jika dapat menggabungkan kekuatan WordPress karena fleksibilitasnya Vue.js dan kemampuan kueri API?
+ 
+ dengan memanfaatkan kelebihan dan fitur-fitur Vue.js dan API untuk membuat situs web yang lebih dinamis dan efisien.
 
 
 ---
 
-<!-- .slide: data-transition="slide" data-auto-animate -->
 
-## Marking Slides
+## Konsep
 
-<!-- .element: class="r-fit-text" -->
-
-[👇](#/1/1) `scroll down` atau `click icon nya`
-
---
-
-#### Scroll Kebawah
-
---
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Marking Slides
+`Web ini dibangun diatas vue.js, kerangka JavaScript populer untuk membangun antarmuka pengguna. Tidak seperti platform CMS tradisional seperti WordPress, VuePress menghasilkan file HTML statis untuk setiap halaman situs web selama proses pembuatan.`
 
 <!-- .element: class="r-fit-text" -->
 
-Use `---` to mark horizontal slides
+`Pendekatan ini menawarkan beberapa keuntungan, termasuk peningkatan kinerja, keamanan yang lebih baik, dan penerapan yang lebih mudah ke jaringan pengiriman konten (CDN). Dengan memanfaatkan Vue.js sebagai kerangka intinya, dapat memungkinkan pengembang membangun situs web yang cepat, responsif, dan dapat disesuaikan dengan mudah.`
+
+<!-- .element: class="r-fit-text" -->
+
+<!-- .slide: data-auto-animate data-background-color="rgb(255, 165, 0)" -->
+
+---
+
+## Kelebihan Vue.js
+
+1. kerangka kerja JavaScript progresif yang terkenal karena kesederhanaan dan fleksibilitasnya.
+
+<!-- .element: class="r-fit-text" -->
+
+2. Vue.js memberi pengembang cara yang kuat namun intuitif untuk membangun antarmuka pengguna interaktif dan aplikasi satu halaman (SPA).
+
+<!-- .element: class="r-fit-text" -->
+
+3. Dengan arsitektur berbasis komponen dan pengikatan data reaktif, Vue.js memudahkan pembuatan komponen UI yang dapat digunakan kembali dan mengelola status aplikasi yang kompleks.
+
+<!-- .element: class="r-fit-text" -->
+
+<!-- .slide: data-auto-animate data-background-color="rgb(60, 179, 113)" -->
+
+--
+
+##
+  dengan demikian memungkinkan pengembang membuat situs web lebih dinamis dan menarik juga dapat menawarkan pengalaman pengguna yang lancar di berbagai perangkat dan ukuran layar.
+
+##
+<!-- .slide: data-auto-animate data-background-color="rgb(255, 165, 0)" -->
+
+---
+
+## Fleksibilitas API
+
+bahasa kueri untuk API yang memungkinkan pengembang mengambil dan memanipulasi data dengan mudah. Tidak seperti RESTful API tradisional, yang sering kali memerlukan banyak permintaan untuk mengambil data terkait, API memungkinkan klien menentukan dengan tepat data apa yang mereka perlukan dalam satu kueri.
+<!-- .element: class="r-fit-text" -->
+
+Pendekatan deklaratif terhadap pengambilan data ini tidak hanya mengurangi jumlah data yang ditransfer melalui jaringan namun juga menyederhanakan proses pengembangan dengan menghilangkan pengambilan data yang berlebihan dan pengambilan data yang kurang.
+
+<!-- .element: class="r-fit-text" -->
+
+<!-- .slide: data-auto-animate data-background-color="rgb(238, 130, 238)" -->
+
+--
+
+##
+Dengan menggabungkan API ke dalam website, pengembang dapat memanfaatkan kemampuan kuerinya yang kuat untuk mengambil konten dari WordPress dan sumber data lainnya dengan presisi dan efisien.
+
+##
+<!-- .slide: data-auto-animate data-background-color="rgb(208,245,91)" -->
+
+--
+
+##
+Dengan beberapa elemen tersebut memungkinkan pengembang mengambil konten dari WordPress dan merendernya secara dinamis menggunakan komponen Vue.js.
+
+##
+
+<!-- .slide: data-auto-animate data-background-color="rgb(60, 179, 113)" -->
+
+---
+
+## Komponen
+Vue.js kit menyediakan seperangkat blok bangunan yang dapat digunakan pengembang untuk membuat situs web yang dinamis dan interaktif. Blok penyusun ini mencakup komponen Vue.js, kueri api, dan file Markdown. 
+<!-- .element: class="r-fit-text" -->
+
+Komponen Vue.js memungkinkan pengembang merangkum logika dan perilaku UI ke dalam unit yang dapat digunakan kembali, sementara kueri api memungkinkan mereka mengambil data dari WordPress dan sumber lainnya.
+<!-- .element: class="r-fit-text" -->
+
+File Markdown, di sisi lain, menyediakan cara sederhana dan intuitif untuk menulis konten menggunakan format teks biasa.
+
+<!-- .element: class="r-fit-text" -->
+<!-- .slide: data-auto-animate data-background-color="rgb(255, 165, 0)" -->
+
+---
+
+## Manfaat Utama
+
+1. Performance
+<!-- .element: class="fragment fade-in" -->
+2. Flexibility
+<!-- .element: class="fragment fade-in" -->
+3. Security
+<!-- .element: class="fragment fade-in" -->
+4. Scalability
+<!-- .element: class="fragment fade-in" -->
+5. Ease Deployment
+<!-- .element: class="fragment fade-in" -->
+
+<!-- .slide: data-auto-animate data-background-color="rgb(60, 179, 113)" -->
+
+--
+
+## Terakhir
+
+Kesimpulan, Website ini menawarkan fleksibilitas dan kinerja Vue.js kepada pengembang yang dikombinasikan dengan kapabilitas kueri API yang baik.
+<!-- .element: class="r-fit-text" -->
+Dengan memanfaatkan teknologi ini, dapat mendorong pengembang untuk menciptakan layanan pengembangan wordpress yang dinamis, interaktif, dan khusus nya dapat menawarkan pengalaman pengguna yang lancar di berbagai perangkat dan platform.Baik sedang membangun blog sederhana atau aplikasi web yang kompleks.
+<!-- .element: class="r-fit-text" -->
+
+<!-- .slide: data-auto-animate data-background-color="rgb(255, 165, 0)" -->
+
+---
+
+<!-- .slide: data-auto-animate data-background-color="rgb(65,84,222)" -->
+## 
+# Terima Kasih
 
 <!-- .element: class="fragment fade-in" -->
 
-Use `--` to separate vertical slides in a horizontal slide.
-
-<!-- .element: class="fragment fade-in" -->
-
-Use `<!-- .slide: ... -->` to add attributes to slide
-
-<!-- .element: class="fragment fade-in" -->
-
-Use `<!-- .element: ... -->` to add attributes to the previous HTML element
-
-<!-- .element: class="fragment fade-in" -->
-
---
-
-🔥 Menyala abangku!
-
----
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Markdown
-
-<!-- .element: class="r-fit-text" -->
-
-You can use all kinds of markup in slides.
-
-<!-- .element: class="r-fit-text" -->
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Markdown
-
-You can use all kinds of markup in slides.
-
-### This is an H3
-
-Headings will transform to UPPERCASE by default.
-
-Here is paragraph with some **bold**, _italic_, ~~strike-through~~ text and a [link](#), and it can auto break itself, so you don't need to worry the length.
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Markdown
-
-You can use all kinds of markup in slides.
-
-List is `inline-block` by default.
-
-- Item
-- Item
-- Item
-
-1. Item 1
-1. Item 2
-1. Item 3
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Markdown
-
-You can use all kinds of markup in slides.
-
-Code block will get auto highlight if you enable `highlight` plugin.
-
-```js
-const a = 1;
-```
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Markdown
-
-You can use all kinds of markup in slides.
-
-You can also write math equation using tex syntax if you enable `math` plugin.
-
-$$
-J(\theta_0,\theta_1) = \sum_{i=0}
-$$
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Markdown
-
-You can use all kinds of markup in slides.
-
-⚠**Note**: Table, hr and other nonstandard Markdown syntax is not supported.
-
----
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Layout
-
-<!-- .element: class="r-fit-text" -->
-
---
-
-<!-- .slide: data-auto-animate  -->
-
-## Layout
-
-<!-- .element: class="r-fit-text" -->
-
-👆 The `r-fit-text` class makes text as large as possible without overflowing the slide.
-
---
-
-<!-- .slide: data-auto-animate  -->
-
-## Layout
-
-![Logo](https://theme-hope-assets.vuejs.press/logo.svg)
-
-<!-- .element: class="r-stretch" -->
-
-👆 The `r-stretch` class helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide.
-
---
-
-<!-- .slide: data-auto-animate data-background-color="rgb(70, 70, 255)" -->
-
-## Layout
-
-### Background
-
-Custom background by adding `data-background` attribute to slide.
-
----
-
-<!-- .slide: data-auto-animate -->
-
-## Fragment
-
-<!-- .element: class="r-fit-text" -->
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Fragment
-
-<!-- .element: class="r-fit-text" -->
-
-Fragments are used to highlight or incrementally reveal individual elements on a slide.
-
-Add `fragment` and animation class to element.
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Fragment
-
-### Animation class
-
-- `fade-in`
-<!-- .element: class="fragment fade-in" -->
-
-- `fade-out`
-<!-- .element: class="fragment fade-out" -->
-
-- `fade-up`
-<!-- .element: class="fragment fade-up" -->
-
-<!-- list break -->
-
-- `fade-down`
-<!-- .element: class="fragment fade-down" -->
-
-- `fade-left`
-<!-- .element: class="fragment fade-left" -->
-
-- `fade-right`
-<!-- .element: class="fragment fade-right" -->
-
-<!-- list break -->
-
-- `fade-in-then-out`
-<!-- .element: class="fragment fade-in-then-out" -->
-
-- `fade-in-then-semi-out`
-<!-- .element: class="fragment fade-in-then-semi-out" -->
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Fragment
-
-### Animation class
-
-- `grow`
-<!-- .element: class="fragment grow" -->
-
-- `shrink`
-<!-- .element: class="fragment shrink" -->
-
-- `strike`
-<!-- .element: class="fragment strike" -->
-
-<!-- list break -->
-
-- `highlight-red`
-<!-- .element: class="fragment highlight-red" -->
-
-- `highlight-green`
-<!-- .element: class="fragment highlight-green" -->
-
-- `highlight-blue`
-<!-- .element: class="fragment highlight-blue" -->
-
-<!-- list break -->
-
-- `highlight-current-red`
-<!-- .element: class="fragment highlight-current-red" -->
-
-- `highlight-current-green`
-<!-- .element: class="fragment highlight-current-green" -->
-
-- `highlight-current-blue`
-<!-- .element: class="fragment highlight-current-blue" -->
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Fragment
-
-### Multiple fragments
-
-Multiple fragments can be applied to the same element sequentially by wrapping it
-
-<span class="fragment fade-in">
-  <span class="fragment highlight-red">
-    <span class="fragment fade-out">
-      Fade in > Turn red > Fade out
-    </span>
-  </span>
-</span>
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Fragment
-
-### Order
-
-Order can be changed using the `data-fragment-index` attribute.
-
-Multiple elements can appear at the same index.
-
-- Appears last
-<!-- .element: class="fragment" data-fragment-index="3"-->
-
-- Appears second
-<!-- .element: class="fragment" data-fragment-index="2"-->
-
-<!-- list break -->
-
-- Appears first
-<!-- .element: class="fragment" data-fragment-index="1"-->
-
-- Appears second
-<!-- .element: class="fragment" data-fragment-index="2"-->
-
----
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Transition
-
-<!-- .element: class="r-fit-text" -->
-
---
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Transition
-
-<!-- .element: class="r-fit-text" -->
-
-Transition can be changed by setting reveal.js `transition` option globally or `data-transition` attribute on slide.
-
-Possible values:
-
-- none
-- fade
-- slide
-
-<!-- list break -->
-
-- convex
-- concave
-- zoom
-
---
-
-<!-- .slide: data-auto-animate -->
-
-## Transition
-
-<!-- .element: class="r-fit-text" -->
-
-### Auto animate
-
-`data-auto-animate` can be added on nearby slides to make an animation on unchanged elements.
-
----
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Functions
-
-<!-- .element: class="r-fit-text" -->
-
---
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Functions
-
-<!-- .element: class="r-fit-text" -->
-
-### Code
-
-By enabling `highlight` plugin, you can highlight code blocks.
-
-You can use `[a-b|c-d]` syntax to highlight lines by steps.
-
-```js [1-2|3|4]
-let a = 1;
-let b = 2;
-let c = (x) => 1 + 2 + x;
-c(3);
-```
-
---
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Functions
-
-<!-- .element: class="r-fit-text" -->
-
-### Overview
-
-Press `Esc` or `O` to enter overview mode when the presentation is active
-
---
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Functions
-
-<!-- .element: class="r-fit-text" -->
-
-### Full Screen
-
-Press `F` or `F11` to enter full-screen when the presentation is active
-
---
-
-<!-- .slide: data-transition="slide" data-auto-animate -->
-
-## Functions
-
-<!-- .element: class="r-fit-text" -->
-
-### Zoom
-
-Hold down the `alt` key (`ctrl` in Linux) and click on any element to zoom towards it.
-
-Click again to zoom back out.
-
----
-
-<!-- .element: class="r-fit-text" -->
-
-## The End
+##
 
 @slideend

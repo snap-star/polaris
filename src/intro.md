@@ -5,6 +5,6 @@ cover:
 
 # Intro Page
 
-Hey hope you enjoy watching anime here,
+Hey hope you enjoy watching something here,
 <!-- more -->
-Semoga bisa enjoy nonton anime disini. ;)
+cheers ;)

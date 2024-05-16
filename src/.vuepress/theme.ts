@@ -14,7 +14,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "./logo.png",
+  logo: "#",
 
   repo: "buffedcream/polar-stream",
 
@@ -26,13 +26,13 @@ export default hopeTheme({
   // sidebar:
   sidebar,
 
-  footer: "Disclaimer : This site Ayanime does not store any files on its server. All contents are provided by non-affiliated third parties",
+  footer: "Disclaimer : This site Polaris does not store any files on its server. All contents are provided by non-affiliated third parties",
 
   displayFooter: true,
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": ["Hidden#1"],
+      "/presentasi/encrypt.html": ["Hidden#1"],
     },
   },
 

@@ -46,5 +46,5 @@ export default navbar([
     ],
   },*/
   { text: "Jadwal Release", icon: "clock", link: "/jadwal-release/"},
-  { text: "Daftar Anime", icon: "folder", link: "/anime/"},
+  { text: "Daftar", icon: "folder", link: "/anime/"},
 ]);

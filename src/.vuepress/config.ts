@@ -10,8 +10,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "en-US",
-  title: "Ayanime",
-  description: "Nonton Streaming Anime Subtitle Indonesia Gratis",
+  title: "Polaris",
+  description: "Sebuah SItus",
   //import theme.ts dan sidebarku
   theme,
   //prismjs
@@ -19,9 +19,11 @@ export default defineUserConfig({
     light: "material-light",
     dark: "material-dark",
   },
+
   //catalog
 
   // Enable it with pwa
    shouldPrefetch: false,
+   
    clientConfigFile: path.resolve(__dirname, "./client.ts"),
 });
