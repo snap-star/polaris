@@ -1,8 +1,8 @@
 import { defineClientConfig } from "vuepress/client";
-import { setupTransparentNavbar } from "vuepress-theme-hope/presets/transparentNavbar.js";
+import axios from 'axios';
 
 export default defineClientConfig({
-  enhance({ app, router, siteData }) {},
+  enhance({ vue, app, router, siteData }) {},
   setup() {},
   rootComponents: [],
 });
