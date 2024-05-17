@@ -74,7 +74,7 @@ export default hopeTheme({
      },
 	
 		search: {
-		searchMaxSuggestions: 10
+		MaxSuggestions: 10
     },
     components: {
       components: ["Badge", "VPCard", "ArtPlayer", "Share","SiteInfo","VPBanner","VidStack"],
@@ -139,7 +139,7 @@ export default hopeTheme({
       // mermaid: true,
 
        playground: {
-         presets: ["ts", "vue", "js", "html", "css"],
+         presets: ["ts", "vue", ],
        },
 
       // install reveal.js before enabling it

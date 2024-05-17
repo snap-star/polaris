@@ -22,5 +22,3 @@ heroFullScreen: false
 #     name: Movie
 #     desc: Anime - Movie
 #     link: /anime/movie/
-	
-footer: "Disclaimer : This site Polaris does not store any files on its server. All contents are provided by non-affiliated third parties"

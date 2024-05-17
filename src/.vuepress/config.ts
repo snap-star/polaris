@@ -14,11 +14,6 @@ export default defineUserConfig({
   description: "Sebuah SItus",
   //import theme.ts dan sidebarku
   theme,
-  //prismjs
-  prismjs: {
-    light: "material-light",
-    dark: "material-dark",
-  },
 
   //catalog
 
