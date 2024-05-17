@@ -1,0 +1,10 @@
+/* .vuepress/styles/index.styl or .vuepress/styles/index.css */
+.post {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .post h2 {
+    color: #2c3e50;
+  }
+  
