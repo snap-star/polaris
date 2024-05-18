@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>WordPress Posts</h1>
+    <h1>Release Terbaru</h1>
     <div class="posts-grid" v-if="posts.length">
       <div v-for="post in posts" :key="post.id" class="post-item">
         <img :src="getFeaturedImage(post)" alt="Post cover" class="post-cover" />
@@ -24,7 +24,7 @@
       };
     },
     mounted() {
-      axios.get('https://ayanime.me/wp-json/wp/v2/posts?_embeds')
+      axios.get('https://ayanime.me/wp-json/wp/v2/posts?_embed')
         .then(response => {
           this.posts = response.data;
         })

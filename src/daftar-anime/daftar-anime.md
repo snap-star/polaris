@@ -1,9 +1,5 @@
 ---
-title: Jadwal Release
-index: false
-icon: clock
-category:
-  - Schedule
+index: True
 ---
 
-<catalog />
+<AnimeGallery />

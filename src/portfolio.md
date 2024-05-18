@@ -3,14 +3,14 @@ home: true
 portfolio: true
 title: Profile
 icon: circle-info
-name: Rendi Yuspramana Putra
+name: Chigusa Asuha
 avatar: https://ayanime.me/wp-content/uploads/2024/05/undefined_image.png
 titles:
   - Cuma Karyawan
   - Developer Wannabe
-  - Kopi + Rokok = Menyala
+  - Kopi + 🚬 = Menyala 🔥
 content: true
 footer: false
 ---
 
-Hope you enjoy the presentation.
+Hope you like being here ;)
