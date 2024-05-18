@@ -68,9 +68,7 @@ export default hopeTheme({
        serverURL: "https://waline-test-ashen-chi.vercel.app/",
      },
 	
-		search: {
-		MaxSuggestions: 10
-    },
+		search: true,
     components: {
       components: ["Badge", "VPCard", "ArtPlayer", "Share","SiteInfo","VPBanner","VidStack"],
     },

@@ -31,6 +31,8 @@
     "flowchart": "^1.2.0",
     "flowchart.js": "^1.18.0",
     "flowchart.ts": "^3.0.0",
+    "fs-extra": "^11.2.0",
+    "graphql-request": "^7.0.1",
     "hls.js": "^1.5.8",
     "mpegts.js": "^1.7.3",
     "vidstack": "^1.11.21"
