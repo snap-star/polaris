@@ -1,9 +1,5 @@
 ---
 title: Anime
+layout: BlogHome
 index: true
-icon: film
-category:
-  - Anime
 ---
-
-<catalog />

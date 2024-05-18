@@ -1,26 +1,21 @@
 ---
 home: true
-layout: BlogHome
-icon: home
 title: Home
-heroImage: #
-heroText: Polaris
-tagline:
-heroFullScreen: false
-# projects:
-#   - icon: project
-#     name: Daftar Anime
-#     desc: Daftar Seluruh Anime
-#     link: /daftar-anime/
-
-#   - icon: clock
-#     name: Jadwal Release
-#     desc: Jadwal Release Anime Terbaru
-#     link: /jadwal-release/
-
-#   - icon: film
-#     name: Movie
-#     desc: Anime - Movie
-#     link: /anime/movie/
-
+heroImage: /images/hero.png
+heroText: Selamat Datang
+tagline: Nonton Streaming Anime Terbaru Sub Indo Kualitas HD dan Full HD
+actions:
+  - text: Get Started
+    link: /guide/
+    type: primary
+  - text: Learn More
+    link: /about/
+    type: secondary
+features:
+  - title: Streaming
+    details: Nonton Anime Dengan Subtitle Indonesia
+  - title: Download
+    details: Bisa Kamu Download Secara Gratis
+  - title: Update
+    details: Update Setiap Hari
 ---
