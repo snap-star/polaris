@@ -8,3 +8,8 @@
     color: #2c3e50;
   }
   
+/* .vuepress/styles/index.styl or .vuepress/styles/index.css */
+.post iframe {
+  width: 100%;
+  height: auto;
+}

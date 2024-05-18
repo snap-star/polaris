@@ -20,6 +20,7 @@
       return {
         posts: [],
         md: new MarkdownIt(),
+        html: true,  // Enable HTML tags in source
       };
     },
     mounted() {
