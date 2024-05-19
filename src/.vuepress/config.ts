@@ -4,7 +4,7 @@ import { getDirname, path} from "vuepress/utils"
 
 
 export default defineUserConfig({
-  base: "/",
+  base: "/polar-stream/",
 
   lang: "en-US",
   title: "Polaris",
