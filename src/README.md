@@ -1,15 +1,16 @@
 ---
 home: true
+icon: home
 title: Home
 heroImage: /images/hero.png
 heroText: Selamat Datang
 tagline: Nonton Streaming Anime Terbaru Sub Indo Kualitas HD dan Full HD
 actions:
-  - text: Get Started
-    link: /guide/
+  - text: Link Start!
+    link: /wordpress/
     type: primary
-  - text: Learn More
-    link: /about/
+  - text: About us
+    link: /portfolio.html
     type: secondary
 features:
   - title: Streaming

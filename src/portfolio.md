@@ -13,4 +13,5 @@ content: true
 footer: false
 ---
 
-Hope you like being here ;)
+What you're expecting ? nothing `about us`
+Well, Hope you like being here ;)

@@ -1,12 +1,12 @@
 <!-- .vuepress/components/GraphQLPosts.vue -->
 <template>
     <div class="graphql-posts">
-      <h1>Blog Posts</h1>
+      <h1>Latest Release</h1>
       <div class="posts-grid" v-if="posts.length">
         <div v-for="post in posts" :key="post.id" class="post-item">
           <img :src="post.featuredImage.node.sourceUrl" alt="Post cover" class="post-cover" />
           <h2 class="post-title">{{ post.title }}</h2>
-          <p class="post-excerpt" v-html="post.excerpt"></p>
+          <!--<p class="post-excerpt" v-html="post.excerpt"></p>-->
           <a :href="post.uri" class="read-more">Read More</a>
         </div>
       </div>
@@ -62,7 +62,7 @@
   .posts-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
   
   .post-item {
@@ -78,20 +78,20 @@
   
   .post-title {
     margin-top: 8px;
-    font-size: 1.5em;
+    font-size: 1em;
     color: #333;
   }
   
-  .post-excerpt {
+  /*.post-excerpt {
     margin-top: 8px;
     color: #666;
-  }
+  }*/
   
   .read-more {
     display: inline-block;
     margin-top: 12px;
     padding: 8px 16px;
-    background-color: #007bff;
+    background-color: #779dff;
     color: white;
     text-decoration: none;
     border-radius: 4px;

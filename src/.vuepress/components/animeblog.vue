@@ -6,8 +6,8 @@
         <h1>Welcome to My Site</h1>
         <p>This is a custom tagline</p>
         <div class="actions">
-          <router-link to="/guide/" class="button">Get Started</router-link>
-          <router-link to="/about/" class="button">Learn More</router-link>
+          <router-link to="/wordpress/" class="button">Link Start!</router-link>
+          <router-link to="#" class="button">Learn More</router-link>
         </div>
       </div>
       <div class="features">
