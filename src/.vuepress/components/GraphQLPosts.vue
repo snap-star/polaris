@@ -7,7 +7,7 @@
           <img :src="post.featuredImage.node.sourceUrl" alt="Post cover" class="post-cover" />
           <h2 class="post-title">{{ post.title }}</h2>
           <!--<p class="post-excerpt" v-html="post.excerpt"></p>-->
-          <a :href="post.uri" class="read-more">Read More</a>
+          <a :href="'anime'+post.uri" class="read-more">Read More</a>
         </div>
       </div>
       <p v-else>Loading posts...</p>
