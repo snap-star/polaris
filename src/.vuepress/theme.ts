@@ -6,7 +6,7 @@ import { POLAR_STAR } from "./logo.js";
 export default hopeTheme({
   custom: true,
   fullscreen: true,
-  hostname: "buffedcream.github.io",
+  hostname: "/polar-stream/",
   author: {
     name: "Polaris",
     url: "https://ayanime.me/",
