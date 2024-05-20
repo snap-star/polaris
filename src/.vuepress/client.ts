@@ -7,6 +7,8 @@ import AnimeGallery from "./components/AnimeGallery.vue";
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
 import GraphQLPosts from "./components/GraphQLPosts.vue";
 import AnimeGrid from "./components/AnimeGrid.vue";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+
 
 export default defineClientConfig({
   enhance: ({ app, router, siteData }) => {
@@ -25,5 +27,22 @@ export default defineClientConfig({
       },
       true,
     );
+enhance({ app, router }) {
+    const auth = getAuth();
+    router.beforeEach((to, from, next) => {
+      const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+      if (requiresAuth) {
+        onAuthStateChanged(auth, user => {
+          if (user) {
+            next();
+          } else {
+            next('/login');
+          }
+        });
+      } else {
+        next();
+      }
+    });
+
   },
 });
