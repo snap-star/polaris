@@ -4,10 +4,10 @@ export default sidebar({
   "/":[
   "",
    {
-    text: "Presentasi",
-    icon: "laptop",
-    link: "/presentasi/",
-    prefix: "presentasi/",
+    text: "List",
+    icon: "list",
+    link: "/anime/",
+    prefix: "anime/",
     //activeMatch: "^/anime/(?:(?!a/|b/).*)?$",
     children: "structure",
     },

@@ -1,10 +1,8 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { POLAR_STAR } from "./logo.js";
 
 export default hopeTheme({
-  custom: true,
   fullscreen: true,
   hostname: "buffedcream.github.io",
   author: {
@@ -131,17 +129,17 @@ export default hopeTheme({
       // install mermaid before enabling it
       // mermaid: true,
 
-       playground: {
-         presets: ["ts", "vue", ],
-       },
+      // playground: {
+      //   presets: ["ts", "vue", ],
+      // },
 
       // install reveal.js before enabling it
       //revealJs: {
-      //   plugins: ["highlight", "math", "search", "notes", "zoom"],
-      //},
+       //  plugins: ["highlight", "math", "search", "notes", "zoom"],
+      // },
 
       // install @vue/repl before enabling it
-       vuePlayground: true,
+      // vuePlayground: true,
 
       // install sandpack-vue3 before enabling it
       // sandpack: true,
