@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://buffedcream.github.io/sitemap.xml
+Sitemap: https://buffedcream.github.io/polar-stream/sitemap.xml
