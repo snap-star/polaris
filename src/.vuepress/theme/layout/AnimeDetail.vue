@@ -9,7 +9,7 @@
   import { computed } from 'vue';
   import { useRoute } from 'vue-router';
   import { usePageFrontmatter } from '@vuepress/client';
-  import AnimeDetail from '../templates/AnimeDetail.vue';
+  import AnimeDetail from '../../components/AnimeDetail.vue';
   
   export default {
     components: {
