@@ -3,7 +3,7 @@ import theme from "./theme.js";
 import { getDirname, path} from "vuepress/utils"
 
 export default defineUserConfig({
-  base: "/polar-stream/",
+  base: "/",
 
   lang: "en-US",
   title: "Polaris",
