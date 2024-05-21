@@ -8,6 +8,7 @@ import GraphQLPosts from "./components/GraphQLPosts.vue";
 import AnimeGrid from "./components/AnimeGrid.vue";
 import AnimeDetail from "./components/AnimeDetail.vue";
 import AnimeLayout from "./layouts/AnimeLayout.vue";
+import { createAuth0 } from '@auth0/auth0-vue';
 
 export default defineClientConfig({
   layouts: {

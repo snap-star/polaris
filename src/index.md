@@ -21,8 +21,7 @@ footer: Made by Auth0 User with ❤️
         <LoginButton :client="auth0client" @login-complete="getUser()" />
       </p>
     </div>
-  </div>
-
+    </div>
 </template>
 
 <script>
