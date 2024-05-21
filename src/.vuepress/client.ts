@@ -15,7 +15,7 @@ import SchedulePage from "./components/SchedulePage.vue";
 export default defineClientConfig({
   layouts: {
     //added AnimeLayout
-    AnimeLayout, AnimeDetail,
+    AnimeLayout, AnimeDetail,SchedulePage, AnimeGrid, AnimeDetail
 
   },
  enhance: ({ app, router, siteData }) => {
