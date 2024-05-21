@@ -18,6 +18,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import { fetchAnimeData } from '../utils/fetchAnimeData';
+import { useDarkmode } from "vuepress-theme-hope/client";
 
 export default {
   name: 'AnimeGallery',
@@ -33,6 +34,9 @@ export default {
     };
   },
 };
+const { isDarkmode } = useDarkmode();
+
+console.log(isDarkmode.value); // get darkmode status
 </script>
 
 <style scoped>

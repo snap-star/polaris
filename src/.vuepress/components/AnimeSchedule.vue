@@ -14,6 +14,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import { fetchScheduledAnimeData } from '../utils/fetchScheduledAnimeData';
+import { useDarkmode } from "vuepress-theme-hope/client";
 
 export default {
   name: 'AnimeSchedule',
@@ -29,6 +30,9 @@ export default {
     };
   },
 };
+const { isDarkmode } = useDarkmode();
+
+console.log(isDarkmode.value); // get darkmode status
 </script>
 
 <style scoped>

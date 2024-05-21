@@ -3,6 +3,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
+  darkmode: "toggle",
   fullscreen: true,
   hostname: "buffedcream.github.io",
   author: {
