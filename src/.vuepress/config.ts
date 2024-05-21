@@ -7,7 +7,7 @@ export default defineUserConfig({
 
   lang: "en-US",
   title: "Polaris",
-  description: "Sebuah SItus",
+  description: "Template Anime Streaming Terbaru",
   //theme
   theme,
 

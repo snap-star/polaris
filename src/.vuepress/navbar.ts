@@ -45,7 +45,8 @@ export default navbar([
       "strawberry",
     ],
   },*/
-  { text: "Jadwal Release", icon: "clock", link: "/jadwal-release/"},
+  { text: "Jadwal Release", icon: "clock", link: "/schedule/schedule.html"},
   { text: "Daftar", icon: "folder", link: "/anime/"},
   { text: "API", icon: "down", link: "/api/"},
+  { text: "Account", icon: "account", children: ["/Login/", "/Logout/", "/dashboard/",],},
 ]);
