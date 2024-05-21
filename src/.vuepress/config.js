@@ -11,3 +11,20 @@ module.exports = {
    ]
  }
 }
+
+// src/.vuepress/config.js
+//...
+
+head: [
+  //...
+
+  // import an external script
+  ["script", { src: "https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js" }],
+  // add a script
+  [
+    "script",
+    {},
+    `\
+      // your script here
+    `,
+  ]]
