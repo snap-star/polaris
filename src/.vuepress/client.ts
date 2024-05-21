@@ -10,12 +10,12 @@ import AnimeDetail from "./components/AnimeDetail.vue";
 import AnimeLayout from "./layouts/AnimeLayout.vue";
 import LoginButton from "./components/LoginButton.vue";
 import LogoutButton from "./components/LogoutButton.vue";
-import SchedulePage from "./components/SchedulePage.vue";
+import AnimeSchedule from "./components/AnimeSchedule.vue";
 
 export default defineClientConfig({
   layouts: {
     //added AnimeLayout
-    AnimeLayout, AnimeDetail,SchedulePage, AnimeGrid, AnimeDetail
+    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid,
 
   },
  enhance: ({ app, router, siteData }) => {
@@ -29,7 +29,7 @@ export default defineClientConfig({
     app.component("AnimeLayout", AnimeLayout);
     app.component("LoginButton", LoginButton);
     app.component("LogoutButton", LogoutButton);
-    app.component("SchedulePage", SchedulePage);
+    app.component("AnimeSchedule", AnimeSchedule);
       },
   setup(){
     setupRunningTimeFooter(

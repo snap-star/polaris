@@ -13,6 +13,7 @@ export default defineUserConfig({
 
   // Enable it with pwa
    shouldPrefetch: false,
+
    clientConfigFile: path.resolve(__dirname, "./client.ts"),
 
 });

@@ -6,6 +6,8 @@ gfm: true
 highlights: true
 sidebar: false
 comment: false
+author: false
+page-info: false
 ---
 
-<SchedulePage />
+<AnimeSchedule />

@@ -185,9 +185,9 @@ export default hopeTheme({
          ],
          shortcuts: [
            {
-             name: "Demo",
-             short_name: "Demo",
-             url: "/demo/",
+             name: "Anime",
+             short_name: "Anime",
+             url: "/pages/anime-gallery.html",
              icons: [
                {
                  src: "/assets/icon/guide-maskable.png",
