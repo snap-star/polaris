@@ -86,7 +86,6 @@ export default hopeTheme({
       mark: true,
       plantuml: true,
       spoiler: true,
-      revealJs: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -134,9 +133,9 @@ export default hopeTheme({
       // },
 
       // install reveal.js before enabling it
-      //revealJs: {
-       //  plugins: ["highlight", "math", "search", "notes", "zoom"],
-      // },
+      revealJs: {
+         plugins: ["highlight", "math", "search", "notes", "zoom"],
+       },
 
       // install @vue/repl before enabling it
       // vuePlayground: true,
