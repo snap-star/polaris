@@ -8,7 +8,7 @@ export default sidebar({
     icon: "list",
     link: "/anime/",
     prefix: "anime/",
-    activeMatch: "^/anime/(?:(?!a/|b/).*)?$",
+   // activeMatch: "^/anime/(?:(?!a/|b/).*)?$",
     children: "structure",
     },
   ]
