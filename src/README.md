@@ -11,8 +11,8 @@ bgimagedark: #setimagedark
 bgimagestyle:
   background-attachment: fixed
 actions:
-  - text: Link Start!
-    link: /anime/
+  - text: Cek New Release!
+    link: /pages/anime-gallery.html
     icon: arrow-up
     type: primary
   - text: About us
@@ -20,8 +20,8 @@ actions:
     icon: info-circle
     type: secondary
 highlights:
-  - header: Streaming Support
-    description: Streaming Anime Sub Indo
+  - header: Stream Anime Kesukaan Kamu
+    description: Tersedia Banyak Kualitas Stream 480p, 720p, 1080p
     image: #image
     bgimage: #bgimage
     bgimageDark: #bgimagedark
@@ -29,10 +29,10 @@ highlights:
       background-repeat: repeat
       background-size: initial
     features:
-      - title: Streaming
-        details: Nonton Anime Dengan Subtitle Indonesia
+      - title: Subtitle
+        details: Sub indo dong tentunya!
       - title: Download
-        details: Bisa Kamu Download Secara Gratis
+        details: Gratis, Resolusi SD, HD, FHD
       - title: Update
         details: Update Setiap Hari
 ---

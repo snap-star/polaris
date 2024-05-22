@@ -2,8 +2,9 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
+  { text: "Jadwal Release", icon: "clock", link: "/pages/schedule.html"},
+  { text: "Anime List", icon: "folder", link: "/pages/anime-gallery.html"},
   "/portfolio",
-  "/presentasi/",
   /*{
     text: "Posts",
     icon: "pen-to-square",
@@ -45,8 +46,4 @@ export default navbar([
       "strawberry",
     ],
   },*/
-  { text: "Jadwal Release", icon: "clock", link: "/pages/schedule.html"},
-  { text: "Anime List", icon: "folder", link: "/pages/anime-gallery.html"},
-  { text: "API", icon: "down", link: "/api/"},
-  { text: "Account", icon: "account", children: ["Login", "Logout", "dashboard",],},
 ]);
