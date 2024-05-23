@@ -38,7 +38,8 @@ export async function fetchAnimeData() {
       date: post.date,
       description: post.excerpt,
       link: `/anime/${post.slug}`,
-      category: post.categories.nodes.length > 0 ? post.categories.nodes[0].name : 'Uncategorized'
+      category: post.categories.nodes.length > 0 ? post.categories.nodes[0].name : 'Uncategorized',
+      nextScheduleDate: post.date // Placeholder for the actual schedule date
     }));
   } catch (error) {
     console.error('Error fetching anime data:', error);

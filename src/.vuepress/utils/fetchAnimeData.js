@@ -1,21 +1,19 @@
 import { GraphQLClient, gql } from 'graphql-request';
 
 const endpoint = 'https://ayanime.me/graphql';
-
 const graphQLClient = new GraphQLClient(endpoint);
 
 const query = gql`
-  {
-    posts {
+  query getPosts($first: Int!, $after: String) {
+    posts(first: $first, after: $after) {
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
       nodes {
         id
         title
         date
-        categories {
-          nodes {
-            name
-          }
-        }
         slug
         excerpt
         featuredImage {
@@ -28,19 +26,22 @@ const query = gql`
   }
 `;
 
-export async function fetchAnimeData() {
+export async function fetchAnimeData(first, after = null) {
   try {
-    const data = await graphQLClient.request(query);
-    return data.posts.nodes.map(post => ({
-      id: post.id,
-      title: post.title,
-      coverImage: post.featuredImage.node.sourceUrl,
-      date: post.date,
-      description: post.excerpt,
-      link: `/anime/${post.slug}`,
-    }));
+    const variables = { first, after };
+    const data = await graphQLClient.request(query, variables);
+    return {
+      animeList: data.posts.nodes.map(post => ({
+        id: post.id,
+        title: post.title,
+        coverImage: post.featuredImage.node.sourceUrl,
+        episode: 'N/A', // Replace with actual episode data if available
+        link: `/anime/${post.slug}`,
+      })),
+      pageInfo: data.posts.pageInfo,
+    };
   } catch (error) {
     console.error('Error fetching anime data:', error);
-    return [];
+    return { animeList: [], pageInfo: {} };
   }
 }

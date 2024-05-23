@@ -5,7 +5,7 @@
         <router-link :to="anime.link">
           <img :src="anime.coverImage" alt="Anime cover image" class="anime-cover"/>
         </router-link>
-        <badge type="warning" class="episode-badge">{{ anime.episode }} Ep</badge>
+        <span class="episode-badge">{{ anime.episode }} Ep</span>
         <div class="anime-details">
           <router-link :to="anime.link">
             <h3 class="anime-title">{{ anime.title }}</h3>
@@ -14,47 +14,60 @@
       </div>
     </div>
     <div class="pagination-controls">
-      <button @click="previousPage" :disabled="page === 1">Previous</button>
+      <button @click="previousPage" :disabled="!previousPageAvailable">Previous</button>
       <span>Page {{ page }}</span>
-      <button @click="nextPage">Next</button>
+      <button @click="nextPage" :disabled="!pageInfo.hasNextPage">Next</button>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, computed } from 'vue';
 import { fetchAnimeData } from '../utils/fetchAnimeData';
 
 export default {
   name: 'AnimeGallery',
   setup() {
     const animeList = ref([]);
+    const pageInfo = ref({});
     const page = ref(1);
-    const perPage = 10; // Number of items per page
+    const perPage = 10;
+    const endCursor = ref(null);
 
     const fetchData = async () => {
-      animeList.value = await fetchAnimeData(page.value, perPage);
+      console.log(`Fetching data for page: ${page.value}`);
+      const data = await fetchAnimeData(perPage, endCursor.value);
+      animeList.value = data.animeList;
+      pageInfo.value = data.pageInfo;
+      console.log('Fetched data:', animeList.value);
     };
 
     onMounted(fetchData);
-
     watch(page, fetchData);
 
     const nextPage = () => {
-      page.value += 1;
+      if (pageInfo.value.hasNextPage) {
+        endCursor.value = pageInfo.value.endCursor;
+        page.value += 1;
+      }
     };
 
     const previousPage = () => {
       if (page.value > 1) {
+        endCursor.value = null; // Implement a mechanism to get the previous cursor if available
         page.value -= 1;
       }
     };
 
+    const previousPageAvailable = computed(() => page.value > 1);
+
     return {
       animeList,
+      pageInfo,
       page,
       nextPage,
       previousPage,
+      previousPageAvailable,
     };
   },
 };
@@ -155,7 +168,6 @@ export default {
 .pagination-controls span {
   margin: 0 8px;
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {

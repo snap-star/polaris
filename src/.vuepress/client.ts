@@ -12,13 +12,14 @@ import LoginButton from "./components/LoginButton.vue";
 import LogoutButton from "./components/LogoutButton.vue";
 import AnimeSchedule from "./components/AnimeSchedule.vue";
 import AnimeSearch from "./components/AnimeSearch.vue";
+import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
 
 export default defineClientConfig({
   layouts: {
     //added AnimeLayout
-    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
+    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch, GoogleDrivePlayer,
   },
- enhance: ({ app, router, siteData }) => {
+ enhance: ({  app, router, siteData }) => {
     app.component("WordpressPost", WordpressPost);
     app.component("wpost", wpost);
     app.component("animeblog", animeblog);
@@ -31,6 +32,8 @@ export default defineClientConfig({
     app.component("LogoutButton", LogoutButton);
     app.component("AnimeSchedule", AnimeSchedule);
     app.component("AnimeSearch", AnimeSearch);
+    app.component("GoogleDrivePlayer", GoogleDrivePlayer);
+
       },
   setup(){
     setupRunningTimeFooter(

@@ -9,55 +9,50 @@
           </router-link>
           <div class="anime-details">
             <router-link :to="anime.link" class="anime-title-link">
-              <h3 class="anime-title">{{ anime.category }}</h3>
+              <h3 class="anime-title">{{ anime.title }}</h3>
             </router-link>
-            <span class="next-episode-badge">{{ anime.nextScheduleDate }}</span>
+            <span class="next-episode-badge">{{ formatDateTime(anime.nextScheduleDate) }}</span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="pagination-controls">
-      <button @click="previousPage" :disabled="page === 1">Previous</button>
-      <span>Page {{ page }}</span>
-      <button @click="nextPage">Next</button>
     </div>
   </div>
 </template>
 
 <script>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted } from 'vue';
 import { fetchAnimeData } from '../utils/fetchScheduledAnimeData';
 
 export default {
   name: 'AnimeScheduled',
   setup() {
     const animeList = ref({});
-    const page = ref(1);
-    const perPage = 10; // Number of items per page
 
     const fetchData = async () => {
-      animeList.value = await fetchAnimeData(page.value - 1, perPage);
+      const data = await fetchAnimeData();
+      animeList.value = groupByDay(data);
     };
 
     onMounted(fetchData);
 
-    watch(page, fetchData);
-
-    const nextPage = () => {
-      page.value += 1;
+    const groupByDay = (animeList) => {
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const grouped = days.reduce((acc, day) => ({ ...acc, [day]: [] }), {});
+      animeList.forEach(anime => {
+        const day = days[new Date(anime.nextScheduleDate).getDay()];
+        grouped[day].push(anime);
+      });
+      return grouped;
     };
 
-    const previousPage = () => {
-      if (page.value > 1) {
-        page.value -= 1;
-      }
+    const formatDateTime = (dateTime) => {
+      const date = new Date(dateTime);
+      return `${date.toLocaleDateString()} ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
     };
 
     return {
       animeList,
-      page,
-      nextPage,
-      previousPage,
+      formatDateTime
     };
   },
 };
@@ -75,7 +70,7 @@ export default {
 .day-title {
   margin-bottom: 16px;
   font-size: 1.5rem;
-  color: #333;
+  color: #FAFAFA;
 }
 
 .anime-scheduled {
@@ -141,32 +136,6 @@ export default {
   border-radius: 4px;
   display: inline-block;
   text-align: center;
-}
-
-.pagination-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 16px;
-}
-
-.pagination-controls button {
-  margin: 0 8px;
-  padding: 8px 16px;
-  background-color: #42b983;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.pagination-controls button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-.pagination-controls span {
-  margin: 0 8px;
 }
 
 /* Media Queries for Responsiveness */
