@@ -36,6 +36,7 @@
     "flowchart.js": "^1.18.0",
     "flowchart.ts": "^3.0.0",
     "fs-extra": "^11.2.0",
+    "graphql": "^16.8.1",
     "graphql-request": "^7.0.1",
     "hls.js": "^1.5.8",
     "mal-scraper": "^2.13.1",

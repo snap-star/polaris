@@ -16,8 +16,7 @@ import AnimeSearch from "./components/AnimeSearch.vue";
 export default defineClientConfig({
   layouts: {
     //added AnimeLayout
-    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch, Anime
-
+    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
   },
  enhance: ({ app, router, siteData }) => {
     app.component("WordpressPost", WordpressPost);
