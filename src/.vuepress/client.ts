@@ -33,7 +33,6 @@ export default defineClientConfig({
     app.component("AnimeSchedule", AnimeSchedule);
     app.component("AnimeSearch", AnimeSearch);
       },
-
   setup(){
     setupRunningTimeFooter(
       new Date("2024-05-18"),
