@@ -5,7 +5,7 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   darkmode: "toggle",
   fullscreen: true,
-  hostname: "buffedcream.github.io",
+  hostname: "https://ayanime.id",
   author: {
     name: "Polaris",
     url: "https://ayanime.me/",

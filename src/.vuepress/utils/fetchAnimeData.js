@@ -11,6 +11,11 @@ const query = gql`
         id
         title
         date
+        categories {
+          nodes {
+            name
+          }
+        }
         slug
         excerpt
         featuredImage {

@@ -5,7 +5,7 @@
         <router-link :to="anime.link">
           <img :src="anime.coverImage" alt="Anime cover image" class="anime-cover"/>
         </router-link>
-        <badge type="warning" class="episode-badge">{{ anime.episode }} Ep 1</badge>
+        <badge type="warning" class="episode-badge">{{ anime.episode }} Ep</badge>
         <div class="anime-details">
           <router-link :to="anime.link">
             <h3 class="anime-title">{{ anime.title }}</h3>
@@ -154,18 +154,6 @@ export default {
 
 .pagination-controls span {
   margin: 0 8px;
-}
-
-@container (width > 400px) {
-  h2 {
-    font-size: 1.5em;
-  }
-}
-/* with an optional <container-name> */
-@container tall (height > 30rem) {
-  h2 {
-    line-height: 1.6;
-  }
 }
 
 

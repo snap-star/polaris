@@ -1,13 +1,12 @@
 import { GraphQLClient, gql } from 'graphql-request';
-import { formatISO, addDays } from 'date-fns';
 
 const endpoint = 'https://ayanime.me/graphql';
 
 const graphQLClient = new GraphQLClient(endpoint);
 
 const query = gql`
-  query ($startDate: String!, $endDate: String!) {
-    posts(where: { dateQuery: { after: $startDate, before: $endDate } }) {
+  {
+    posts {
       nodes {
         id
         title
@@ -19,17 +18,19 @@ const query = gql`
             sourceUrl
           }
         }
+        categories {
+          nodes {
+            name
+          }
+        }
       }
     }
   }
 `;
 
-export async function fetchScheduledAnimeData() {
+export async function fetchAnimeData() {
   try {
-    const startDate = formatISO(new Date());
-    const endDate = formatISO(addDays(new Date(), 7));
-
-    const data = await graphQLClient.request(query, { startDate, endDate });
+    const data = await graphQLClient.request(query);
     return data.posts.nodes.map(post => ({
       id: post.id,
       title: post.title,
@@ -37,9 +38,10 @@ export async function fetchScheduledAnimeData() {
       date: post.date,
       description: post.excerpt,
       link: `/anime/${post.slug}`,
+      category: post.categories.nodes.length > 0 ? post.categories.nodes[0].name : 'Uncategorized'
     }));
   } catch (error) {
-    console.error('Error fetching scheduled anime data:', error);
+    console.error('Error fetching anime data:', error);
     return [];
   }
 }

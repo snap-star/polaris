@@ -11,11 +11,12 @@ import AnimeLayout from "./layouts/AnimeLayout.vue";
 import LoginButton from "./components/LoginButton.vue";
 import LogoutButton from "./components/LogoutButton.vue";
 import AnimeSchedule from "./components/AnimeSchedule.vue";
+import AnimeSearch from "./components/AnimeSearch.vue";
 
 export default defineClientConfig({
   layouts: {
     //added AnimeLayout
-    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid,
+    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch, Anime
 
   },
  enhance: ({ app, router, siteData }) => {
@@ -30,12 +31,14 @@ export default defineClientConfig({
     app.component("LoginButton", LoginButton);
     app.component("LogoutButton", LogoutButton);
     app.component("AnimeSchedule", AnimeSchedule);
+    app.component("AnimeSearch", AnimeSearch);
       },
+
   setup(){
     setupRunningTimeFooter(
       new Date("2024-05-18"),
       {
-        "/": "Running Time: :day hari :hour Jam :minute Menit :second Detik"
+        "/": "Server Uptime: :day hari :hour Jam :minute Menit :second Detik"
       },
       true,
     );

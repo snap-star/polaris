@@ -36,3 +36,5 @@ highlights:
       - title: Update
         details: Update Setiap Hari
 ---
+
+<app />

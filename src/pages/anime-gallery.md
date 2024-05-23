@@ -2,7 +2,7 @@
 title: Latest Release
 home: true
 heroText: Latest Release
-tagline: false
+tagline: Update Terbaru Hari ini
 sidebar: false
 comment: false
 breadcrumb: false
