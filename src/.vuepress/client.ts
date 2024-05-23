@@ -19,7 +19,7 @@ export default defineClientConfig({
     //added AnimeLayout
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch, GoogleDrivePlayer,
   },
- enhance: ({  app, router, siteData }) => {
+ enhance: ({ app, router, siteData }) => {
     app.component("WordpressPost", WordpressPost);
     app.component("wpost", wpost);
     app.component("animeblog", animeblog);

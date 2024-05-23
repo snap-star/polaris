@@ -52,7 +52,7 @@
             screenshot: true,
             highlight: [
               { time: 10, text: 'Introduction' },
-              { time: 30, text: 'Main Topic' },
+              { time: 50, text: 'Main Topic' },
               { time: 60, text: 'Summary' },
             ],
           });
