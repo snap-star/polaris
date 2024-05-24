@@ -19,8 +19,8 @@
   export default {
     data() {
       return {
-        username: '',
-        password: ''
+        username: 'ayanime',
+        password: 'Hidden#1'
       };
     },
     methods: {

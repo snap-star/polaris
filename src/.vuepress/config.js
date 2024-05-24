@@ -28,12 +28,16 @@ module.exports = {
       config.plugin('vue').use(require('vue-router'), [{
         routes: [
           {
-            path: '/login',
+            path: '/admin/login',
             component: 'Login'
           },
           {
-            path: '/dashboard',
+            path: '/admin/dashboard',
             component: 'Dashboard'
+          },
+          {
+            path: '/anime/',
+            component: 'GoogleDrivePlayer'
           }
         ]
       }]);

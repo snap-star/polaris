@@ -20,7 +20,7 @@ import Dashboard from "./components/Dashboard.vue";
 export default defineClientConfig({
   layouts: {
     //added AnimeLayout
-    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch, GoogleDrivePlayer,
+    AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
   },
  enhance: ({ app, router, siteData }) => {
     app.component("WordpressPost", WordpressPost);
