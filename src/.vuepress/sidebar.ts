@@ -4,12 +4,12 @@ export default sidebar({
   "/":[
   "",
    {
-    text: "List",
+    text: "Episode List",
     icon: "list",
     link: "/anime/",
     prefix: "anime/",
-   // activeMatch: "^/anime/(?:(?!a/|b/).*)?$",
-    children: "structure",
+    activeMatch: "^/anime/"
+    //children: "structure",
     },
   ]
 });

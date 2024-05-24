@@ -1,4 +1,5 @@
 import { defineClientConfig } from "vuepress/client";
+import { getDirname, path } from "vuepress/utils";
 import WordpressPost from './components/WordpressPost.vue';
 import wpost from './components/wpost.vue';
 import animeblog from "./components/animeblog.vue";
@@ -13,6 +14,8 @@ import LogoutButton from "./components/LogoutButton.vue";
 import AnimeSchedule from "./components/AnimeSchedule.vue";
 import AnimeSearch from "./components/AnimeSearch.vue";
 import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
+import Login from './components/Login.vue';
+import Dashboard from "./components/Dashboard.vue";
 
 export default defineClientConfig({
   layouts: {
@@ -33,7 +36,8 @@ export default defineClientConfig({
     app.component("AnimeSchedule", AnimeSchedule);
     app.component("AnimeSearch", AnimeSearch);
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
-
+    app.component("Login", Login);
+    app.component("Dashboard", Dashboard);
       },
   setup(){
     setupRunningTimeFooter(
@@ -44,4 +48,5 @@ export default defineClientConfig({
       true,
     );
   },
+  rootComponents: [],
 });
