@@ -41,6 +41,7 @@
     "graphql-request": "^7.0.1",
     "hls.js": "^1.5.8",
     "mal-scraper": "^2.13.1",
+    "mermaid": "^10.9.1",
     "mpegts.js": "^1.7.3",
     "react": "^18.3.1",
     "vidstack": "^1.11.21"
