@@ -94,7 +94,7 @@ export default {
 
 .anime-card:hover {
   transform: scale(1.05);
-  border: 2px solid #42b983;
+  border: 2px solid var(--theme-color);
 }
 
 .anime-cover {
@@ -109,7 +109,7 @@ export default {
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
-  color: white;
+  color: var(--theme-color);
   padding: 8px;
   display: flex;
   flex-direction: column;
@@ -126,7 +126,7 @@ export default {
 .anime-title {
   margin: 0;
   font-size: 1rem;
-  color: #fafafa;
+  color: var(--theme-color);
   text-align: center;
 }
 
@@ -136,7 +136,7 @@ export default {
   right: 8px;
   display: inline-block;
   padding: 2px 4px;
-  background-color: #036ffc;
+  background-color: var(--theme-color);
   color: #fff;
   border-radius: 4px;
   z-index: 10;
@@ -153,7 +153,7 @@ export default {
 .pagination-controls button {
   margin: 0 8px;
   padding: 8px 16px;
-  background-color: #42b983;
+  background-color: var(--theme-color);
   color: #fff;
   border: none;
   border-radius: 4px;
