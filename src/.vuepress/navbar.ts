@@ -5,6 +5,7 @@ export default navbar([
   { text: "Jadwal Release", icon: "clock", link: "/pages/schedule.html"},
   { text: "Anime List", icon: "folder", link: "/pages/anime-gallery.html"},
   "/portfolio",
+  { text: "Anime Database", icon: "book", link: "/anime-info.html"},
   /*{
     text: "Posts",
     icon: "pen-to-square",

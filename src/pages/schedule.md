@@ -12,5 +12,8 @@ comment: false
 author: false
 page-info: false
 ---
+::: info
+Mohon maaf jika terlambat upload :)
+:::
 
 <AnimeSchedule />

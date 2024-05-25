@@ -9,6 +9,9 @@ export default {
   // theme
   theme: hopeTheme({
     // theme config
+    plugin: {
+      activeHeaderLinks: false,
+    },
   }),
 };
 

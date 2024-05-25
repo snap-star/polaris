@@ -1,58 +1,23 @@
 <template>
-    <div class="login-container">
-      <h1>Login</h1>
-      <form @submit.prevent="login">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" id="username" v-model="username" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" v-model="password" required>
-        </div>
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        username: 'ayanime',
-        password: 'Hidden#1'
-      };
-    },
-    methods: {
-      login() {
-        // Implementasi login
-        console.log('Username:', this.username, 'Password:', this.password);
-      }
+  <div>
+    <input type="text" v-model="username" placeholder="Username" />
+    <input type="password" v-model="password" placeholder="Password" />
+    <button @click="login">Login</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    };
+  },
+  methods: {
+    login() {
+      // Implementasi login
     }
-  };
-  </script>
-  
-  <style scoped>
-  .login-container {
-    width: 300px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
-  .form-group {
-    margin-bottom: 15px;
-  }
-  input {
-    width: 100%;
-    padding: 5px;
-  }
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  </style>
+};
+</script>

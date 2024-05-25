@@ -70,7 +70,6 @@ export default {
 .day-title {
   margin-bottom: 16px;
   font-size: 1.5rem;
-  color: #FAFAFA;
 }
 
 .anime-scheduled {
