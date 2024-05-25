@@ -12,6 +12,9 @@ import AnimeLayout from "./layouts/AnimeLayout.vue";
 import AnimeSchedule from "./components/AnimeSchedule.vue";
 import AnimeSearch from "./components/AnimeSearch.vue";
 import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
+import Login from './components/Login.vue';
+import Dashboard from "./components/Dashboard.vue";
+import AnimeInfo from "./components/AnimeInfo.vue";
 
 export default defineClientConfig({
 
@@ -30,9 +33,11 @@ export default defineClientConfig({
     app.component("AnimeLayout", AnimeLayout);
     app.component("AnimeSchedule", AnimeSchedule);
     app.component("AnimeSearch", AnimeSearch);
+    app.component("AnimeInfo", AnimeInfo);
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
+    app.component("Login", Login);
+    app.component("Dashboard", Dashboard);
   },
-
   setup(){
     setupRunningTimeFooter(
       new Date("2024-05-18"),

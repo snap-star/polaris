@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { getDirname, path} from "vuepress/utils"
-import { hopeTheme } from "vuepress-theme-hope";
 
 export default defineUserConfig({
 

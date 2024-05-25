@@ -27,13 +27,6 @@ module.exports = {
         }
       ]
     ],
-    extend: './vuepress/components/CMS.vue',
-    vue: {
-      config: {
-        productionTip: false,
-        devTools: true,
-      },
-    },
     chainWebpack: (config, isServer) => {
       if (!isServer) {
         config.plugin('register-components').use_(registerComponents);
@@ -41,20 +34,8 @@ module.exports = {
         config.plugin('vue').use(require('vue-router'), [{
         routes: [
           {
-            path: '/admin/login',
-            component: 'Login'
-          },
-          {
-            path: '/admin/dashboard',
-            component: 'Dashboard'
-          },
-          {
             path: '/anime/',
             component: 'GoogleDrivePlayer'
-          },
-          {
-            path: '/login',
-            component: 'LoginForm',  
           },
         ]
       }]);

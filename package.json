@@ -31,7 +31,9 @@
     "@vue/repl": "^4.1.2",
     "@vuepress/plugin-pwa": "2.0.0-rc.30",
     "artplayer": "^5.1.1",
-    "axios": "^1.7.0",
+    "axios": "^1.7.2",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dashjs": "^4.7.4",
     "date-fns": "^3.6.0",
     "express": "^4.19.2",
@@ -43,11 +45,16 @@
     "graphql": "^16.8.1",
     "graphql-request": "^7.0.1",
     "hls.js": "^1.5.8",
+    "jsonwebtoken": "^9.0.2",
     "mal-scraper": "^2.13.1",
     "mermaid": "^10.9.1",
+    "mongoose": "^8.4.0",
     "mpegts.js": "^1.7.3",
     "react": "^18.3.1",
     "request": "^2.88.2",
-    "vidstack": "^1.11.21"
+    "vidstack": "^1.11.21",
+    "vue-router": "^4.3.2",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.43",
+    "vuex": "^4.1.0"
   }
 }
