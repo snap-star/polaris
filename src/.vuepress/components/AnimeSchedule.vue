@@ -88,7 +88,7 @@ export default {
 
 .anime-card:hover {
   transform: scale(1.05);
-  border: 2px solid #42b983;
+  border: 2px solid var(--theme-color);
 }
 
 .anime-cover-link {
@@ -118,18 +118,20 @@ export default {
 .anime-title-link {
   width: 100%;
   text-align: center;
+  color: var(--theme-color);
 }
 
 .anime-title {
   margin: 0;
   font-size: 1rem;
   text-align: center;
+  color: white;
 }
 
 .next-episode-badge {
   margin-top: 8px;
   padding: 4px 8px;
-  background-color: #007BFF;
+  background-color: goldenrod;
   color: #fff;
   font-size: 0.875rem;
   border-radius: 4px;

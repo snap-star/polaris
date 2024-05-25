@@ -25,6 +25,9 @@ export default hopeTheme({
   navbar,
   //navbar title
   navbarTitle: "",
+  //editLink
+  editLink: false,
+  contributors: false,
 
   // sidebar 
   sidebar,

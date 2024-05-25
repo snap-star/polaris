@@ -126,7 +126,7 @@ export default {
 .anime-title {
   margin: 0;
   font-size: 1rem;
-  color: var(--theme-color);
+  color: whitesmoke;
   text-align: center;
 }
 
