@@ -13,6 +13,7 @@ author: false
 page-info: false
 ---
 ::: info
+Jadwal rilis diambil dari postingan terakhir dan biasanya episode selanjutnya rilis setelah 7 hari.
 Mohon maaf jika terlambat upload :)
 :::
 

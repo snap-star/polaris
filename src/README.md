@@ -37,4 +37,6 @@ highlights:
         details: Update Setiap Hari
 ---
 
-<app />
+# Latest Release
+
+<AnimeGallery />
