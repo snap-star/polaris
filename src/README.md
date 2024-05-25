@@ -43,6 +43,10 @@ highlights:
         link: .#
 ---
 
+::: warning
+Web ini masih dalam tahap development :) web origin ada di https://ayanime.me/
+:::
+
 ## Latest Release
 
 <AnimeGallery />
