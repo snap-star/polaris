@@ -3,7 +3,7 @@ containerclass: home
 home: true
 icon: home
 title: Home
-heroImage: /images/hero.png
+heroImage: /shuriken-purple.svg
 heroText: Ayanime.id
 tagline: Nonton Streaming Anime Terbaru Sub Indo Kualitas HD dan Full HD
 bgimage: #setimagelight
@@ -30,13 +30,19 @@ highlights:
       background-size: initial
     features:
       - title: Subtitle
+        icon: closed-captioning
         details: Sub indo dong tentunya!
+        link: .#
       - title: Download
-        details: Gratis, Resolusi SD, HD, FHD
+        icon: download
+        details: Resolusi SD, HD, FHD
+        link: .#
       - title: Update
+        icon: clock
         details: Update Setiap Hari
+        link: .#
 ---
 
-# Latest Release
+## Latest Release
 
 <AnimeGallery />

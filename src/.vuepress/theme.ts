@@ -6,14 +6,16 @@ export default hopeTheme({
   darkmode: "toggle",
   fullscreen: true,
   hostname: "https://ayanime.id",
+  
   author: {
-    name: "Polaris",
+    name: "Ayanime",
     url: "https://ayanime.me/",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "#",
+  logo: "/logo-black.svg",
+  logoDark: "/logo-white.svg",
 
   repo: "buffedcream/polar-stream",
 
@@ -21,11 +23,13 @@ export default hopeTheme({
 
   // navbar
   navbar,
+  //navbar title
+  navbarTitle: "",
 
-  // sidebar:
+  // sidebar 
   sidebar,
 
-  footer: "Disclaimer : This site Polaris does not store any files on its server. All contents are provided by non-affiliated third parties",
+  footer: "Disclaimer : This site Ayanime does not store any files on its server. All contents are provided by non-affiliated third parties",
 
   displayFooter: true,
 
@@ -45,7 +49,7 @@ export default hopeTheme({
       GitHub: "https://github.com/buffedcream",
       Whatsapp: "https://example.com",
       Telegram: "https://example.com",
-      Rss: "https://polar-stream.vercel.app/rss",
+      Rss: "https://ayanime.id/rss",
     },
   },
 
@@ -148,7 +152,7 @@ export default hopeTheme({
     
     // install @vuepress/plugin-pwa and uncomment these if you want a PWA
      pwa: {
-       favicon: "/favicon.ico",
+       favicon: "/shuriken-purple.ico",
        cacheHTML: true,
        cacheImage: true,
        appendBase: true,
