@@ -9,15 +9,9 @@ import GraphQLPosts from "./components/GraphQLPosts.vue";
 import AnimeGrid from "./components/AnimeGrid.vue";
 import AnimeDetail from "./components/AnimeDetail.vue";
 import AnimeLayout from "./layouts/AnimeLayout.vue";
-import LoginButton from "./components/LoginButton.vue";
-import LogoutButton from "./components/LogoutButton.vue";
 import AnimeSchedule from "./components/AnimeSchedule.vue";
 import AnimeSearch from "./components/AnimeSearch.vue";
 import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
-import Login from './components/Login.vue';
-import Dashboard from "./components/Dashboard.vue";
-import MarkdownEditor from "./components/MarkdownEditor.vue";
-import CMS from "./components/CMS.vue";
 
 export default defineClientConfig({
 
@@ -34,15 +28,9 @@ export default defineClientConfig({
     app.component("AnimeGrid", AnimeGrid);
     app.component("AnimeDetail", AnimeDetail);
     app.component("AnimeLayout", AnimeLayout);
-    app.component("LoginButton", LoginButton);
-    app.component("LogoutButton", LogoutButton);
     app.component("AnimeSchedule", AnimeSchedule);
     app.component("AnimeSearch", AnimeSearch);
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
-    app.component("Login", Login);
-    app.component("Dashboard", Dashboard);
-    app.component("CMS", CMS);
-    app.component("MarkdownEditor", MarkdownEditor);
   },
 
   setup(){

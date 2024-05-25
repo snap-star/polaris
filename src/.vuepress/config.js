@@ -51,7 +51,11 @@ module.exports = {
           {
             path: '/anime/',
             component: 'GoogleDrivePlayer'
-          }
+          },
+          {
+            path: '/login',
+            component: 'LoginForm',  
+          },
         ]
       }]);
     }
