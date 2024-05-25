@@ -27,8 +27,18 @@ module.exports = {
         }
       ]
     ],
-    chainWebpack: config => {
-      config.plugin('vue').use(require('vue-router'), [{
+    extend: './vuepress/components/CMS.vue',
+    vue: {
+      config: {
+        productionTip: false,
+        devTools: true,
+      },
+    },
+    chainWebpack: (config, isServer) => {
+      if (!isServer) {
+        config.plugin('register-components').use_(registerComponents);
+      }
+        config.plugin('vue').use(require('vue-router'), [{
         routes: [
           {
             path: '/admin/login',

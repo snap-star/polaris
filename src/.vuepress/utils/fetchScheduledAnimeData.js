@@ -34,7 +34,7 @@ export async function fetchAnimeData() {
     return data.posts.nodes.map(post => ({
       id: post.id,
       title: post.title,
-      coverImage: post.featuredImage.node.sourceUrl,
+      coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl: '',
       date: post.date,
       description: post.excerpt,
       link: `/anime/${post.slug}`,

@@ -34,7 +34,7 @@ export async function fetchAnimeData(first, after = null) {
       animeList: data.posts.nodes.map(post => ({
         id: post.id,
         title: post.title,
-        coverImage: post.featuredImage.node.sourceUrl,
+        coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl: '',
         episode: 'N/A', // Replace with actual episode data if available
         link: `/anime/${post.slug}`,
       })),

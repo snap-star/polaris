@@ -1,4 +1,4 @@
-import { defineClientConfig } from "vuepress/client";
+import { defineClientConfig, useRoutes } from "vuepress/client";
 import { getDirname, path } from "vuepress/utils";
 import WordpressPost from './components/WordpressPost.vue';
 import wpost from './components/wpost.vue';
@@ -16,8 +16,11 @@ import AnimeSearch from "./components/AnimeSearch.vue";
 import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
 import Login from './components/Login.vue';
 import Dashboard from "./components/Dashboard.vue";
+import MarkdownEditor from "./components/MarkdownEditor.vue";
+import CMS from "./components/CMS.vue";
 
 export default defineClientConfig({
+
   layouts: {
     //added AnimeLayout
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
@@ -38,7 +41,10 @@ export default defineClientConfig({
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
     app.component("Login", Login);
     app.component("Dashboard", Dashboard);
-      },
+    app.component("CMS", CMS);
+    app.component("MarkdownEditor", MarkdownEditor);
+  },
+
   setup(){
     setupRunningTimeFooter(
       new Date("2024-05-18"),
