@@ -16,11 +16,18 @@ const query = gql`
         date
         slug
         excerpt
+        categories {
+          nodes {
+            name
+          }
+        }
         featuredImage {
           node {
             sourceUrl
           }
         }
+        eroEpisodebaru
+        eroEpisodetitle
       }
     }
   }
@@ -33,10 +40,11 @@ export async function fetchAnimeData(first, after = null) {
     return {
       animeList: data.posts.nodes.map(post => ({
         id: post.id,
-        title: post.title,
-        coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl: '',
-        episode: 'N/A', // Replace with actual episode data if available
-        link: `/anime/${post.slug}`,
+        title: post.title, //mengambil nama anime
+        coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl: '', //ambil gambar
+        episode: post.eroEpisodebaru, // episode
+        link: `/anime/${post.slug}`, //path link anime di web
+        category: post.categories.nodes.map(category => category.name),
       })),
       pageInfo: data.posts.pageInfo,
     };

@@ -2,33 +2,42 @@ import { request, gql } from 'graphql-request';
 import fs from 'fs-extra';
 import path from 'path';
 
-// Endpoint GraphQL WordPress Anda
+// Endpoint GraphQL WordPress
 const endpoint = 'https://ayanime.me/graphql';
 
 // Query GraphQL untuk mengambil postingan
 const query = gql`
-  {
-    posts {
-      nodes {
-        id
-        title
-        excerpt
-        content
-        date
-        slug
-        categories {
-          nodes {
-            name
-          }
-        }
-        featuredImage {
-          node {
-            sourceUrl
-          }
+{
+  posts {
+    nodes {
+      id
+      title
+      content
+      date
+      slug
+      featuredImage {
+        node {
+          id
+          sourceUrl
         }
       }
-    }
+      eroEpisodebaru
+      eroEpisodetitle
+      terms {
+        nodes {
+          name
+        }
+      }
+      categories {
+        nodes {
+          name
+        }
+      }
+      abEmbedgroup:abHostname
+      eroEmbed
+    } 
   }
+}
 `;
 
 // Fungsi untuk membuat file markdown
@@ -42,6 +51,7 @@ category: ${JSON.stringify(categories)}
 cover: ${post.featuredImage ? post.featuredImage.node.sourceUrl : ''}
 ---
 
+# ${post.eroEpisodetitle}
 ${post.content}
 `;
 

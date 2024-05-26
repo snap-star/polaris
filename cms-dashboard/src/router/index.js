@@ -1,21 +1,18 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Home from '../views/Home.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import HomePage from '../views/Home.vue';
 import AnimePosts from '../views/AnimePosts.vue';
-import Dashboard from '../components/Dashboard.vue';
-import Login from '../components/Login.vue';
-
-Vue.use(Router);
+import UserDashboard from '../components/Dashboard.vue';
+import UserLogin from '../components/Login.vue';
 
 const routes = [
-  { path: '/', component: Home },
+  { path: '/', component: HomePage },
   { path: '/anime', component: AnimePosts },
-  { path: '/dashboard', component: Dashboard },
-  { path: '/login', component: Login },
+  { path: '/dashboard', component: UserDashboard },
+  { path: '/login', component: UserLogin },
 ];
 
-const router = new Router({
-  mode: 'history',
+const router = createRouter({
+  history: createWebHistory(),
   routes,
 });
 

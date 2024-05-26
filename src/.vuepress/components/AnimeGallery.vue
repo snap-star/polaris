@@ -5,7 +5,7 @@
         <router-link :to="anime.link">
           <img :src="anime.coverImage" alt="Anime cover image" class="anime-cover"/>
         </router-link>
-        <span class="episode-badge">{{ anime.episode }} Ep</span>
+        <span class="episode-badge">Episode {{ anime.episode }}</span>
         <div class="anime-details">
           <router-link :to="anime.link">
             <h3 class="anime-title">{{ anime.title }}</h3>

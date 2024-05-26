@@ -1,18 +1,12 @@
 <template>
     <div>
-      <h1>Dashboard</h1>
-      <PostEditor />
+      <h1>Welcome to Home Page</h1>
     </div>
   </template>
   
   <script>
-  import PostEditor from './PostEditor.vue';
-  
   export default {
-    name: 'UserDashboard',
-    components: {
-      PostEditor
-    }
+    name: 'HomePage'
   };
   </script>
   
