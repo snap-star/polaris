@@ -43,21 +43,16 @@ export default hopeTheme({
   },
 
   blog: {
-    description: "Halo!",
+    description: "Ayanime - Tempat nonton anime gratis subtitle indonesia",
     intro: "/intro.html",
     medias: {
       Discord: "https://discord.com/channels/@me/170599167553437696",
       Email: "mailto:chigusa@ayanime.me",
       Facebook: "https://example.com",
       GitHub: "https://github.com/buffedcream",
-      Whatsapp: "https://example.com",
       Telegram: "https://example.com",
       Rss: "https://ayanime.id/rss",
     },
-  },
-
-  metaLocales: {
-    editLink: "Edit this page on GitHub",
   },
 
   // enable it to preview all changes in time
@@ -126,7 +121,7 @@ export default hopeTheme({
        flowchart: true,
 
       // gfm requires mathjax-full to provide tex support
-       gfm: true,
+      // gfm: true,
 
       // install katex before enabling it
       // katex: true,
@@ -135,7 +130,7 @@ export default hopeTheme({
       // mathjax: true,
 
       // install mermaid before enabling it
-      mermaid: true,
+      //mermaid: true,
 
       // playground: {
       //   presets: ["ts", "vue", ],

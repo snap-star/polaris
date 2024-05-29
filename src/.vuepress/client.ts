@@ -15,6 +15,7 @@ import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
 import Login from './components/Login.vue';
 import Dashboard from "./components/Dashboard.vue";
 import AnimeInfo from "./components/AnimeInfo.vue";
+import "vuepress-theme-hope/presets/bounce-icon.scss";
 
 export default defineClientConfig({
 
