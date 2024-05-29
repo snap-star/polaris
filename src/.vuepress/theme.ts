@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { catalogPlugin } from '@vuepress/plugin-catalog'
 
 export default hopeTheme({
   darkmode: "toggle",
@@ -66,10 +65,10 @@ export default hopeTheme({
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
     // You MUST generate and use your own comment service in production.
-     comment: {
-       provider: "Waline",
-       serverURL: "https://waline-test-ashen-chi.vercel.app/",
-     },
+    // comment: {
+    //  provider: "Waline",
+    //   serverURL: "https://waline-test-ashen-chi.vercel.app/",
+    // },
 	
 		search: true,
     components: {

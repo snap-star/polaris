@@ -9,25 +9,7 @@ const endpoint = 'https://ayanime.me/graphql';
 const query = gql`
 query iframe {
   posts(
-    where: {
-      metaQuery: {
-        metaArray: [
-          {
-            type: CHAR
-            key: "ab_embedgroup"
-            value: "ayadrive"
-            compare: LIKE
-          },
-          {
-            type: CHAR
-            key: "ab_embedgroup"
-            value: "ayaplay"
-            compare: LIKE
-          }
-        ]
-        relation: AND
-      }
-    }
+    where: {metaQuery: {metaArray: [{type: CHAR, key: "ab_embedgroup", value: "ayadrive", compare: LIKE}, {type: CHAR, key: "ab_embedgroup", value: "ayaplay", compare: LIKE}], relation: AND}}
   ) {
     edges {
       node {
@@ -54,6 +36,7 @@ query iframe {
             sourceUrl
           }
         }
+        abEmbedgroup
         abHostname
         abEmbed
       }
@@ -70,7 +53,8 @@ async function createMarkdownFile(post) {
   // Convert abHostname and abEmbed to strings if they are arrays
   const abHostname = Array.isArray(post.abHostname) ? JSON.stringify(post.abHostname) : post.abHostname;
   const abEmbed = Array.isArray(post.abEmbed) ? JSON.stringify(post.abEmbed) : post.abEmbed;
-  const abEmbedgroup = Array.isArray(post.abEmbedgroup)? post.abEmbedgroup.join(', ') : post.abEmbedgroup;
+  const abEmbedgroup = Array.isArray(post.abEmbedgroup)?JSON.parse(JSON.stringify ([post.abEmbedgroup])):post.abEmbedgroup;
+
 
 
   const content = `---

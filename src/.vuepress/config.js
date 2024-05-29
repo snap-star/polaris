@@ -1,5 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
+
 export default {
   // site config
   lang: "en-US",
@@ -17,7 +18,7 @@ export default {
 
 module.exports = {
     themeConfig: {
-      // ...
+      //...
     },
     plugins: [
       [
@@ -38,6 +39,6 @@ module.exports = {
             component: 'GoogleDrivePlayer'
           },
         ]
-      }]);
+      }]);  
     }
   };

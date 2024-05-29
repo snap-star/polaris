@@ -1,5 +1,4 @@
 import { defineClientConfig, useRoutes } from "vuepress/client";
-import { getDirname, path } from "vuepress/utils";
 import WordpressPost from './components/WordpressPost.vue';
 import wpost from './components/wpost.vue';
 import animeblog from "./components/animeblog.vue";
@@ -18,7 +17,27 @@ import AnimeInfo from "./components/AnimeInfo.vue";
 import "vuepress-theme-hope/presets/bounce-icon.scss";
 
 export default defineClientConfig({
-
+  plugins: [
+    [
+      '@vuepress/plugin-register-components',
+      {
+        componentsDir: __dirname + '/src/components'
+      }
+    ]
+  ],
+  chainWebpack: (config, isServer) => {
+    if (!isServer) {
+     config.plugin('register-components').user_('registerComponents')
+    }
+      config.plugin('vue').user(require('vue-router'),[{
+        routes: [
+          {
+            path: 'anime',
+            component: 'GoogleDriveplayer'
+          },
+        ]
+      }]);
+  },
   layouts: {
     //added AnimeLayout
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,

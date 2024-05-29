@@ -1,10 +1,9 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { getDirname, path} from "vuepress/utils"
-import { catalogPlugin } from '@vuepress/plugin-catalog'
+import { getDirname, path} from "vuepress/utils";
 
 export default defineUserConfig({
-
+  //head tag customize
   head: [
     //import custom font
     ["link",{ rel: "preconnect", href: "https://fonts.googleapis.com"}],
@@ -20,27 +19,13 @@ export default defineUserConfig({
        },
     ],
   ],
-  //catalog
-  plugins: [
-    catalogPlugin({
-      
-    }),
-  ],
-  extendsPage: (page) => {
-    //set catalog info route meta
-    page.routeMeta = {
-      //judul catalog
-      title: page.title,
-    }
-  },
+  //theme customize
   base: "/",
   lang: "en-US",
   title: "Polaris",
   description: "Template Anime Streaming Terbaru",
-  //theme
-  theme,
+  theme: theme,
     // Enable it with pwa
     shouldPrefetch: false,
     clientConfigFile: path.resolve(__dirname, "./client.ts"),
-    
 });
