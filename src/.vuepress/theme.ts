@@ -1,6 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { catalogPlugin } from '@vuepress/plugin-catalog'
 
 export default hopeTheme({
   darkmode: "toggle",
@@ -28,6 +29,7 @@ export default hopeTheme({
   //editLink
   editLink: false,
   contributors: false,
+  //post type
 
   // sidebar 
   sidebar,
@@ -207,4 +209,5 @@ export default hopeTheme({
   },
   //TOC
   toc : false,
+
 });

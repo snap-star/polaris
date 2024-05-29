@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { getDirname, path} from "vuepress/utils"
+import { catalogPlugin } from '@vuepress/plugin-catalog'
 
 export default defineUserConfig({
 
@@ -19,7 +20,19 @@ export default defineUserConfig({
        },
     ],
   ],
-
+  //catalog
+  plugins: [
+    catalogPlugin({
+      
+    }),
+  ],
+  extendsPage: (page) => {
+    //set catalog info route meta
+    page.routeMeta = {
+      //judul catalog
+      title: page.title,
+    }
+  },
   base: "/",
   lang: "en-US",
   title: "Polaris",
