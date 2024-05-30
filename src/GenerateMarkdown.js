@@ -50,12 +50,22 @@ async function createMarkdownFile(post) {
   const categories = post.categories.edges.map(edge => edge.node.name);
   const terms = post.terms.nodes.map(term => term.name);
 
-  // Convert abHostname and abEmbed to strings if they are arrays
-  const abHostname = Array.isArray(post.abHostname) ? JSON.stringify(post.abHostname) : post.abHostname;
-  const abEmbed = Array.isArray(post.abEmbed) ? JSON.stringify(post.abEmbed) : post.abEmbed;
-  const abEmbedgroup = Array.isArray(post.abEmbedgroup)?JSON.parse(JSON.stringify ([post.abEmbedgroup])):post.abEmbedgroup;
+  // Ensure values are strings or properly formatted for markdown
+  const abHostname = typeof post.abHostname === 'string' ? post.abHostname : JSON.stringify(post.abHostname);
+  const abEmbed = typeof post.abEmbed === 'string' ? post.abEmbed : JSON.stringify(post.abEmbed);
 
-
+  // Handle abEmbedgroup, which is now JSON string
+  let abEmbedgroup = '';
+  try {
+    const parsedEmbedgroup = JSON.parse(post.abEmbedgroup);
+    if (Array.isArray(parsedEmbedgroup)) {
+      abEmbedgroup = parsedEmbedgroup.map(embed => embed.ab_embed ? embed.ab_embed : JSON.stringify(embed)).join('\n');
+    } else {
+      abEmbedgroup = typeof parsedEmbedgroup === 'string' ? parsedEmbedgroup : JSON.stringify(parsedEmbedgroup);
+    }
+  } catch (e) {
+    console.error('Error parsing abEmbedgroup:', e);
+  }
 
   const content = `---
 title: ${post.title}
@@ -70,6 +80,8 @@ abEmbedgroup: ${abEmbedgroup ? abEmbedgroup : ''}
 ---
 
 # ${post.title}
+
+${abEmbedgroup ? abEmbedgroup : ''}
 `;
 
   const filePath = path.join('anime', `${post.slug}.md`);
