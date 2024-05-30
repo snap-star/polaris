@@ -1,8 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import { getDirname, path} from "vuepress/utils";
+import { path } from "@vuepress/utils";
+import animeListPlugin from "./plugins/anime-list/animelist.vue";
 
 export default defineUserConfig({
+    
   //head tag customize
   head: [
     //import custom font
@@ -19,13 +21,20 @@ export default defineUserConfig({
        },
     ],
   ],
+
+   //custom plugins TODO: developing
+ //  plugins: [
+ //   animeListPlugin
+ // ],
+
   //theme customize
   base: "/",
   lang: "en-US",
   title: "Polaris",
   description: "Template Anime Streaming Terbaru",
   theme: theme,
-    // Enable it with pwa
-    shouldPrefetch: false,
-    clientConfigFile: path.resolve(__dirname, "./client.ts"),
+  // Enable it with pwa
+
+  shouldPrefetch: false,
+  clientConfigFile: path.resolve(__dirname, "./client.ts"),
 });

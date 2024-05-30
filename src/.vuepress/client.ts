@@ -1,43 +1,24 @@
 import { defineClientConfig, useRoutes } from "vuepress/client";
-import WordpressPost from './components/WordpressPost.vue';
-import wpost from './components/wpost.vue';
+import WordpressPost from './components/WordpressPost.vue'; //test axios api 1
+import wpost from './components/wpost.vue'; // test axios api 2
 import animeblog from "./components/animeblog.vue";
-import AnimeGallery from "./components/AnimeGallery.vue";
+import AnimeGallery from "./components/AnimeGallery.vue"; //untuk loading latest post
 import { setupRunningTimeFooter } from "vuepress-theme-hope/presets/footerRunningTime.js";
-import GraphQLPosts from "./components/GraphQLPosts.vue";
+import GraphQLPosts from "./components/GraphQLPosts.vue"; //api layer untuk fetching data dari ayanime.id
 import AnimeGrid from "./components/AnimeGrid.vue";
 import AnimeDetail from "./components/AnimeDetail.vue";
 import AnimeLayout from "./layouts/AnimeLayout.vue";
-import AnimeSchedule from "./components/AnimeSchedule.vue";
-import AnimeSearch from "./components/AnimeSearch.vue";
-import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue';
-import Login from './components/Login.vue';
-import Dashboard from "./components/Dashboard.vue";
-import AnimeInfo from "./components/AnimeInfo.vue";
-import "vuepress-theme-hope/presets/bounce-icon.scss";
+import AnimeSchedule from "./components/AnimeSchedule.vue"; //nanti dipakai buat jadwal schedule anime TODO: fetching schedule
+import AnimeSearch from "./components/AnimeSearch.vue"; //anime search info via api fetch from myanimelist.com TODO: Still need develop
+import GoogleDrivePlayer from './components/GoogleDrivePlayer.vue'; //komponen player video - using artplayer
+import Login from './components/Login.vue'; //login form TODO: still need develop
+import Dashboard from "./components/Dashboard.vue"; //dashboard layout still need develop
+import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api fetch on myanimelist.com TODO: still need develop
+import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce
+import AnimeList from "./plugins/anime-list/AnimeList.vue";
 
 export default defineClientConfig({
-  plugins: [
-    [
-      '@vuepress/plugin-register-components',
-      {
-        componentsDir: __dirname + '/src/components'
-      }
-    ]
-  ],
-  chainWebpack: (config, isServer) => {
-    if (!isServer) {
-     config.plugin('register-components').user_('registerComponents')
-    }
-      config.plugin('vue').user(require('vue-router'),[{
-        routes: [
-          {
-            path: 'anime',
-            component: 'GoogleDriveplayer'
-          },
-        ]
-      }]);
-  },
+
   layouts: {
     //added AnimeLayout
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
@@ -57,6 +38,7 @@ export default defineClientConfig({
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
     app.component("Login", Login);
     app.component("Dashboard", Dashboard);
+    app.component("AnimeList", AnimeList);
   },
   setup(){
     setupRunningTimeFooter(
