@@ -50,11 +50,11 @@ async function createMarkdownFile(post) {
   const categories = post.categories.edges.map(edge => edge.node.name);
   const terms = post.terms.nodes.map(term => term.name);
 
-  // Ensure values are strings or properly formatted for markdown
+  //  memastikan value adalah string / benar-benar telah terformat ke dalam markdown
   const abHostname = typeof post.abHostname === 'string' ? post.abHostname : JSON.stringify(post.abHostname);
   const abEmbed = typeof post.abEmbed === 'string' ? post.abEmbed : JSON.stringify(post.abEmbed);
 
-  // Handle abEmbedgroup, which is now JSON string
+  // Handle abEmbedgroup, php register wpgraphql supaya membaca kedalam format JSON kemudian diubah kedalam string
   let abEmbedgroup = '';
   try {
     const parsedEmbedgroup = JSON.parse(post.abEmbedgroup);
@@ -66,7 +66,7 @@ async function createMarkdownFile(post) {
   } catch (e) {
     console.error('Error parsing abEmbedgroup:', e);
   }
-
+// isi konten markdown
   const content = `---
 title: ${post.title}
 date: ${post.date}
