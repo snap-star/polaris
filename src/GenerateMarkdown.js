@@ -5,7 +5,7 @@ import path from 'path';
 // Endpoint GraphQL WordPress
 const endpoint = 'https://ayanime.me/graphql';
 
-// Query GraphQL untuk mengambil postingan
+// Query fetch GraphQL untuk mengambil postingan dari wordpress
 const query = gql`
 query iframe {
   posts(
@@ -45,6 +45,11 @@ query iframe {
 }
 `;
 
+// Fungsi untuk membersihkan nama kategori
+function cleanCategoryName(category) {
+  return category.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+}
+
 // Fungsi untuk membuat file markdown dari data post
 async function createMarkdownFile(post) {
   const categories = post.categories.edges.map(edge => edge.node.name);
@@ -66,7 +71,7 @@ async function createMarkdownFile(post) {
   } catch (e) {
     console.error('Error parsing abEmbedgroup:', e);
   }
-// isi konten markdown
+// isi konten wordpress di translasikan ke file markdown
   const content = `---
 title: ${post.title}
 date: ${post.date}
@@ -74,17 +79,18 @@ slug: ${post.slug}
 categories: ${JSON.stringify(categories)}
 terms: ${JSON.stringify(terms)}
 cover: ${post.featuredImage ? post.featuredImage.node.sourceUrl : ''}
-abHostname: ${abHostname ? abHostname : ''}
-abEmbed: ${abEmbed ? abEmbed : ''}
-abEmbedgroup: ${abEmbedgroup ? abEmbedgroup : ''}
 ---
 
 # ${post.title}
+::: tabs
 
 ${abEmbedgroup ? abEmbedgroup : ''}
-`;
 
-  const filePath = path.join('anime', `${post.slug}.md`);
+:::
+`;
+//menggunakan fungsi cleanedcategory dan menyusun folder markdown berdasarkan kategori post
+  const cleanedcategories = categories.map(cleanCategoryName).join('/');
+  const filePath = path.join('anime', cleanedcategories, `${post.slug}.md`);
   await fs.outputFile(filePath, content);
   console.log(`Created: ${filePath}`);
 }
