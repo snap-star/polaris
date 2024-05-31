@@ -110,9 +110,6 @@ export default hopeTheme({
       tasklist: true,
       vPre: true,
 
-      //emoji
-      
-
       // install chart.js before enabling it
       // chart: true,
 
