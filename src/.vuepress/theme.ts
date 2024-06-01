@@ -3,22 +3,26 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
+  //darkmode option
   darkmode: "toggle",
+  //displaying fullscreen button
   fullscreen: true,
+  //host
   hostname: "https://ayanime.id",
-  
+  //author info bawah post
   author: {
-    name: "Ayanime",
+    name: "Chigusa",
     url: "https://ayanime.me/",
   },
-
+  //icon setting global
   iconAssets: "fontawesome-with-brands",
 
+  //logo setting
   logo: "/logo-black.svg",
   logoDark: "/logo-white.svg",
-
+  //repository setting
   repo: "buffedcream/polar-stream",
-
+  //root project directory
   docsDir: "src",
 
   // navbar
@@ -42,8 +46,14 @@ export default hopeTheme({
       "/presentasi/encrypt.html": ["Hidden#1"],
     },
   },
+  //blog options
+  blogLocales: {
+    slide: "Slides",
+    original: "Original",
+  },
 
   blog: {
+    name: "Ayanime.id",
     description: "Ayanime - Tempat nonton anime gratis subtitle indonesia",
     intro: "/intro.html",
     medias: {
@@ -61,6 +71,12 @@ export default hopeTheme({
 
   plugins: {
     blog: true,
+    feed:
+    {
+      atom: true,
+      rss: true,
+      json: true,
+    },
 
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
@@ -69,7 +85,6 @@ export default hopeTheme({
     //  provider: "Waline",
     //   serverURL: "https://waline-test-ashen-chi.vercel.app/",
     // },
-	
 		search: true,
     components: {
       components: ["Badge", "VPCard", "ArtPlayer", "Share","SiteInfo","VPBanner","VidStack"],
@@ -208,5 +223,4 @@ export default hopeTheme({
   },
   //TOC
   toc : false,
-
 });
