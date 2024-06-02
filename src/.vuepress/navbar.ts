@@ -3,7 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   { text: "Jadwal Release", icon: "clock", link: "/pages/schedule.html"},
-  { text: "Anime List", icon: "folder", link: "/pages/anime-gallery.html"},
+  { text: "Anime List", icon: "folder", children: [{text: "Daftar Anime Style 1", icon: "folder", link: "/anime/"}, {text: "Daftar Anime Style 2", icon: "folder", link: "/pages/anime-gallery.html"}]},
   "/portfolio",
   { text: "Anime Database", icon: "book", link: "/anime-info.html"},
   /*{

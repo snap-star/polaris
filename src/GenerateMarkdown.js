@@ -86,11 +86,8 @@ cover: ${post.featuredImage ? post.featuredImage.node.sourceUrl : ''}
 ---
 
 # ${post.title}
-::: tabs
 
 ${abEmbedgroup ? abEmbedgroup : ''}
-
-:::
 
 Keyword:
 ${post.content}
