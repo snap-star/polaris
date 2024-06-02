@@ -40,6 +40,8 @@ query iframe {
         abEmbedgroup
         abHostname
         abEmbed
+        eroEpisodebaru
+        eroEpisodetitle
       }
     }
   }
@@ -59,6 +61,7 @@ async function createMarkdownFile(post) {
   //  memastikan value adalah string / benar-benar telah terformat ke dalam markdown
   const abHostname = typeof post.abHostname === 'string' ? post.abHostname : JSON.stringify(post.abHostname);
   const abEmbed = typeof post.abEmbed === 'string' ? post.abEmbed : JSON.stringify(post.abEmbed);
+  const eroEpisodetitle = typeof post.eroEpisodetitle === 'string' ? post.eroEpisodetitle : JSON.stringify(post.eroEpisodetitle);
 
   // Handle abEmbedgroup, php register wpgraphql supaya membaca kedalam format JSON kemudian diubah kedalam string
   let abEmbedgroup = '';
@@ -78,7 +81,7 @@ title: ${post.title}
 date: ${post.date}
 slug: ${post.slug}
 categories: ${JSON.stringify(categories)}
-shortTitle: ${JSON.stringify(terms)}
+shortTitle: ${JSON.stringify(eroEpisodetitle)}
 cover: ${post.featuredImage ? post.featuredImage.node.sourceUrl : ''}
 ---
 
