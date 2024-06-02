@@ -8,13 +8,13 @@ export default sidebar({
     icon: "list",
     link: "/anime/",
     prefix: "anime/",
-    activeMatch: "^/anime/$"
+    children: "structure"
     },
-    {
-      text: "Date A Live V",
-      link: "/anime/date_a_live_v/",
-      prefix: "anime/date_a_live_v",
-      activeMatch: "^/anime/date_a_live_v/$",
-    },
+    // {
+    //   text: "Date A Live V",
+    //   link: "/anime/date_a_live_v/",
+    //   prefix: "anime/date_a_live_v",
+    //   activeMatch: "^/anime/date_a_live_v/$",
+    // },
   ]
 });
