@@ -15,7 +15,6 @@ import Login from './components/Login.vue'; //login form TODO: still need develo
 import Dashboard from "./components/Dashboard.vue"; //dashboard layout still need develop
 import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api fetch on myanimelist.com TODO: still need develop
 import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce
-import AnimeList from "./plugins/anime-list/AnimeList.vue";
 
 export default defineClientConfig({
 
@@ -38,7 +37,6 @@ export default defineClientConfig({
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
     app.component("Login", Login);
     app.component("Dashboard", Dashboard);
-    app.component("AnimeList", AnimeList);
   },
   setup(){
     setupRunningTimeFooter(
