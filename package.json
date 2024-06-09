@@ -19,6 +19,7 @@
     "@waline/client": "^3.2.1",
     "@wordpress/api-fetch": "^6.55.0",
     "bootstrap": "^5.3.3",
+    "prettier": "3.3.1",
     "reveal.js": "^5.1.0",
     "vite-plugin-external": "^4.3.1",
     "vue": "^3.4.27",
