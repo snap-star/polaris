@@ -1,11 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { path } from "@vuepress/utils";
-import animeListPlugin from "./plugins/anime-list/animelist.vue";
 
 export default defineUserConfig({
     
-  //head tag customize
+  //head tag customize start
   head: [
     //import custom font
     ["link",{ rel: "preconnect", href: "https://fonts.googleapis.com"}],
@@ -21,20 +20,29 @@ export default defineUserConfig({
        },
     ],
   ],
+  //head tag customize end
 
-   //custom plugins TODO: developing
- //  plugins: [
- //   animeListPlugin
- // ],
 
-  //theme customize
-  base: "/",
-  lang: "en-US",
-  title: "Polaris",
-  description: "Template Anime Streaming Terbaru",
+  //bagian plugin start
+//    custom plugins TODO: developing
+//     plugins: [
+//     animeListPlugin
+//  ],
+  //bagian plugin end
+
+  //theme customize start
+  base: "/", //root
+  lang: "en-US", //bahasa yang dipakai
+  title: "Polaris", //judul program
+  description: "Template Anime Streaming Terbaru", //deskripsi program
   theme: theme,
+    //syntax mereplace komponen
+    // alias: {
+    //   //isi code komponen
+    //   //komponen sidebar asli dan path -> custom sidebar
+    //   "@theme-hope/components/Sidebar": path.resolve( __dirname, /* path ke custom sidebar*/, ),
+    // },
   // Enable it with pwa
-
-  shouldPrefetch: false,
-  clientConfigFile: path.resolve(__dirname, "./client.ts"),
+  shouldPrefetch: false, //power ready app
+  clientConfigFile: path.resolve(__dirname, "./client.ts"), //client config
 });

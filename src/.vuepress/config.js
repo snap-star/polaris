@@ -4,7 +4,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 export default {
   // site config
   lang: "en-US",
-  title: "Polaris",
+  title: "Ayanime",
   description: "Anime Streaming Template",
 
   // theme
@@ -18,8 +18,9 @@ export default {
 
 module.exports = {
     themeConfig: {
-      //...
+      //... isi kode
     },
+    //komponen register plugin
     plugins: [
       [
         '@vuepress/plugin-register-components',
@@ -28,6 +29,8 @@ module.exports = {
         }
       ]
     ],
+
+    //register komponen googledriveplayer todo: masih error on load
     chainWebpack: (config, isServer) => {
       if (!isServer) {
         config.plugin('register-components').use_(registerComponents);
