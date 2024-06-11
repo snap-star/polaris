@@ -3,7 +3,11 @@
     <div class="anime-gallery">
       <div class="anime-card" v-for="anime in animeList" :key="anime.id">
         <router-link :to="anime.link">
-          <img :src="anime.coverImage" alt="Anime cover image" class="anime-cover"/>
+          <img
+            :src="anime.coverImage"
+            alt="Anime cover image"
+            class="anime-cover"
+          />
         </router-link>
         <span class="episode-badge">Episode {{ anime.episode }}</span>
         <div class="anime-details">
@@ -14,7 +18,9 @@
       </div>
     </div>
     <div class="pagination-controls">
-      <button @click="previousPage" :disabled="!previousPageAvailable">Previous</button>
+      <button @click="previousPage" :disabled="!previousPageAvailable">
+        Previous
+      </button>
       <span>Page {{ page }}</span>
       <button @click="nextPage" :disabled="!pageInfo.hasNextPage">Next</button>
     </div>
@@ -22,11 +28,11 @@
 </template>
 
 <script>
-import { ref, onMounted, watch, computed } from 'vue';
-import { fetchAnimeData } from '../utils/fetchAnimeData';
+import { ref, onMounted, watch, computed } from "vue";
+import { fetchAnimeData } from "../utils/fetchAnimeData.js";
 
 export default {
-  name: 'AnimeGallery',
+  name: "AnimeGallery",
   setup() {
     const animeList = ref([]);
     const pageInfo = ref({});
@@ -39,7 +45,7 @@ export default {
       const data = await fetchAnimeData(perPage, endCursor.value);
       animeList.value = data.animeList;
       pageInfo.value = data.pageInfo;
-      console.log('Fetched data:', animeList.value);
+      console.log("Fetched data:", animeList.value);
     };
 
     onMounted(fetchData);
@@ -88,7 +94,9 @@ export default {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s, border 0.3s;
+  transition:
+    transform 0.3s,
+    border 0.3s;
   border: 2px solid transparent;
 }
 

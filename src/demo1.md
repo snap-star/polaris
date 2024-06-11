@@ -1,4 +1,5 @@
 ---
+index: false
 containerClass: home
 home: true
 icon: home
