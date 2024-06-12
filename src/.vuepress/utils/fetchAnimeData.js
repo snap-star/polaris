@@ -33,6 +33,7 @@ const query = gql`
   }
 `;
 
+//ini adalah fungsi membersihkan dan membuat link menjadi huruf kecil dan menambahkan underscore "_"
 function cleanCategoryName(category) {
   return category.replace(/[^a-z0-9]/gi, "_").toLowerCase();
 }
@@ -42,14 +43,18 @@ export async function fetchAnimeData(first, after = null) {
     const variables = { first, after };
     const data = await graphQLClient.request(query, variables);
     return {
-      animeList: data.posts.nodes.map((post) => ({
-        id: post.id,
-        title: post.title, //mengambil nama anime
-        coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl : "", //ambil gambar
-        episode: post.eroEpisodebaru, // episode
-        category: post.categories.nodes.map((category) => category.name),
-        link: `/anime/${JSON.stringify(post.category)}/${post.slug}`, //path link anime di web
-      })),
+      animeList: data.posts.nodes.map((post) => {
+        const categories = post.categories.nodes.map((category) => category.name);
+        const categoryPath = categories.map(cleanCategoryName).join(","); //ini adalah fungsi untuk me read data atau mapping data categories
+        return{
+          id: post.id, //post id
+          title: post.title, //mengambil nama anime
+          coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl : "", //mengambil gambar
+          episode: post.eroEpisodebaru, // mengambil data episode untuk badge
+          category: categories,
+          link: `/anime/${categoryPath}/${post.slug}`, //path link anime di web
+        };
+      }),
       pageInfo: data.posts.pageInfo,
     };
   } catch (error) {
