@@ -43,6 +43,6 @@ export default defineUserConfig({
     //   "@theme-hope/components/Sidebar": path.resolve( __dirname, /* path ke custom sidebar*/, ),
     // },
   // Enable it with pwa
-  shouldPrefetch: false, //power ready app
+  shouldPrefetch: false, //pwa
   clientConfigFile: path.resolve(__dirname, "./client.ts"), //client config
 });

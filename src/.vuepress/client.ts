@@ -15,6 +15,8 @@ import Login from './components/Login.vue'; //login form TODO: still need develo
 import Dashboard from "./components/Dashboard.vue"; //dashboard layout still need develop
 import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api fetch on myanimelist.com TODO: still need develop
 import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce
+import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update when new content available
+import { onMounted } from "vue";
 
 export default defineClientConfig({
 
@@ -38,6 +40,7 @@ export default defineClientConfig({
     app.component("Login", Login);
     app.component("Dashboard", Dashboard);
   },
+  //custom setup script
   setup(){
     setupRunningTimeFooter(
       new Date("2024-05-18"),
@@ -46,6 +49,10 @@ export default defineClientConfig({
       },
       true,
     );
+    //force update pwa
+    onMounted (() => {
+      forceUpdate()
+    })
   },
   rootComponents: [],
 });
