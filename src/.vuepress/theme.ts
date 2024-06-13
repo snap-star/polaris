@@ -184,39 +184,39 @@ export default hopeTheme(
 
       // install @vuepress/plugin-pwa and uncomment these if you want a PWA
       pwa: {
-        favicon: "src/.vuepress/public/shuriken-purple.ico",
+        favicon: "/shuriken-purple.ico",
         cacheHTML: true,
         cacheImage: true,
         appendBase: true,
         apple: {
-          icon: "src/.vuepress/public/shuriken-white.svg",
+          icon: "public/shuriken-white.svg",
           statusBarColor: "black",
         },
         msTile: {
-          image: "src/.vuepress/public/shuriken-purple.svg",
+          image: "public/shuriken-purple.svg",
           color: "#ffffff",
         },
         manifest: {
           icons: [
             {
-              src: "src/.vuepress/public/shuriken-purple.svg",
+              src: "public/shuriken-purple.svg",
               sizes: "512x512",
               purpose: "maskable",
               type: "image/png",
             },
             {
-              src: "src/.vuepress/public/shuriken-purple.svg",
+              src: "public/shuriken-purple.svg",
               sizes: "192x192",
               purpose: "maskable",
               type: "image/png",
             },
             {
-              src: "src/.vuepress/public/shuriken-purple.svg",
+              src: "public/shuriken-purple.svg",
               sizes: "512x512",
               type: "image/png",
             },
             {
-              src: "src/.vuepress/public/shuriken-purple.svg",
+              src: "public/shuriken-purple.svg",
               sizes: "192x192",
               type: "image/png",
             },
