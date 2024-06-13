@@ -189,34 +189,34 @@ export default hopeTheme(
         cacheImage: true,
         appendBase: true,
         apple: {
-          icon: "public/shuriken-white.svg",
+          icon: "/shuriken-white.svg",
           statusBarColor: "black",
         },
         msTile: {
-          image: "public/shuriken-purple.svg",
+          image: "/shuriken-purple.svg",
           color: "#ffffff",
         },
         manifest: {
           icons: [
             {
-              src: "public/shuriken-purple.svg",
+              src: "/shuriken-purple.svg",
               sizes: "512x512",
               purpose: "maskable",
               type: "image/png",
             },
             {
-              src: "public/shuriken-purple.svg",
+              src: "/shuriken-purple.svg",
               sizes: "192x192",
               purpose: "maskable",
               type: "image/png",
             },
             {
-              src: "public/shuriken-purple.svg",
+              src: "/shuriken-purple.svg",
               sizes: "512x512",
               type: "image/png",
             },
             {
-              src: "public/shuriken-purple.svg",
+              src: "/shuriken-purple.svg",
               sizes: "192x192",
               type: "image/png",
             },
