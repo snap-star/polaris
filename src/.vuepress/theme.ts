@@ -196,6 +196,8 @@ export default hopeTheme(
           image: "/shuriken-purple.svg",
           color: "#ffffff",
         },
+        showInstall: true,
+        update: "hint",
         manifest: {
           icons: [
             {

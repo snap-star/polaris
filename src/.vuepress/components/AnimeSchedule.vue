@@ -1,7 +1,9 @@
 <template>
   <div class="anime-scheduled-container">
     <div v-for="(animes, day) in animeList" :key="day" class="day-group">
-      <h2 class="day-title">{{ day }}</h2>
+      <div class="day-container">
+        <h2 class="day-title">{{ day }}</h2>
+      </div>
       <div class="anime-scheduled">
         <div class="anime-card" v-for="anime in animes" :key="anime.id">
           <router-link :to="anime.link" class="anime-cover-link">

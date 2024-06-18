@@ -28,6 +28,9 @@ const query = gql`
         }
         eroEpisodebaru
         eroEpisodetitle
+        eroStatus
+        eroHot
+        eroType
       }
     }
   }
@@ -51,8 +54,11 @@ export async function fetchAnimeData(first, after = null) {
           title: post.title, //mengambil nama anime
           coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl : "", //mengambil gambar
           episode: post.eroEpisodebaru, // mengambil data episode untuk badge
-          category: categories,
+          category: `${JSON.stringify(categories)}`,
           link: `/anime/${categoryPath}/${post.slug}`, //path link anime di web
+          eroStatus: post.eroStatus,
+          eroHot: post.eroHot,
+          eroType: post.eroType,
         };
       }),
       pageInfo: data.posts.pageInfo,

@@ -17,6 +17,7 @@ import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api 
 import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce
 import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update when new content available
 import { onMounted } from "vue";
+import IframeLoader from "./components/IframeLoader.vue";
 
 export default defineClientConfig({
 
@@ -39,6 +40,7 @@ export default defineClientConfig({
     app.component("GoogleDrivePlayer", GoogleDrivePlayer);
     app.component("Login", Login);
     app.component("Dashboard", Dashboard);
+    app.component('IframeLoader', IframeLoader);
   },
   //custom setup script
   setup(){

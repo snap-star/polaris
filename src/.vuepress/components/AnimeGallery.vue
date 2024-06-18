@@ -10,9 +10,14 @@
           />
         </router-link>
         <span class="episode-badge">Episode {{ anime.episode }}</span>
+        <span v-if="anime.eroHot" class="hot-badge">
+          <i class="fas fa-fire"></i>
+        </span>
+        <span class="status-badge">{{ anime.eroStatus }}</span>
+        <span class="type-badge">{{ anime.eroType }}</span>
         <div class="anime-details">
           <router-link :to="anime.link">
-            <h3 class="anime-title">{{ anime.title }}</h3>
+            <h3 class="anime-title">{{ `${JSON.parse(anime.category)}` }}</h3>
           </router-link>
         </div>
       </div>
@@ -148,6 +153,39 @@ export default {
   color: #fff;
   border-radius: 4px;
   z-index: 10;
+  font-size: small;
+}
+
+.hot-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: red;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.status-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: yellow;
+  color: black;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: small;
+}
+
+.type-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: blue;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
   font-size: small;
 }
 
