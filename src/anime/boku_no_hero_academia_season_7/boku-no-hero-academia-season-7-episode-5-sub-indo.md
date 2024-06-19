@@ -9,7 +9,7 @@ cover: https://i3.wp.com/ayanime.me/wp-content/uploads/2024/05/Boku-no-Hero-Acad
 
 # Boku no Hero Academia Season 7 Episode 5 Sub Indo
 
-<iframe src="https://drive.google.com/file/d/12Ha37RyEDS8CUm3EGNb6kAUednykNWAx/preview" width="100%" height="480" allow="accelerometer; autoplay; encrypted-media; gyroscope; fullscreen; picture-in-picture" scrolling="no" seamless="" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe-loader iframe-src1="" iframe-src2="https://drive.google.com/file/d/12Ha37RyEDS8CUm3EGNb6kAUednykNWAx/preview"></iframe-src>
 
 Keyword:
 Boku no Hero Academia Season 7 Episode 5 Sub Indo | Streaming Boku no Hero Academia Season 7 Episode 5 Sub Indo | Nonton Boku no Hero Academia Season 7 Episode 5 Sub Indo| Download Boku no Hero Academia Season 7 Episode 5 Sub Indo| Boku no hero academia season 7 sub indo
