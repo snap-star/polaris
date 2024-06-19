@@ -9,7 +9,7 @@ cover: https://i1.wp.com/ayanime.me/wp-content/uploads/2024/03/1710701520-6985-1
 
 # Shinigami Bocchan to Kuro Maid Season 3 Episode 9 Sub Indo
 
-<iframe src="https://drive.google.com/file/d/1_ukpUlqRWXP0dt_-XQtVitSD96bOuM_y/preview" width="100%" height="480" allow="accelerometer; autoplay; encrypted-media; gyroscope; fullscreen; picture-in-picture" scrolling="no" seamless="" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe-loader iframe-src1="" iframe-src2="https://drive.google.com/file/d/1_ukpUlqRWXP0dt_-XQtVitSD96bOuM_y/preview"></iframe-loader>
 
 
 Keyword:

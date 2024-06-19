@@ -9,7 +9,7 @@ cover: https://i1.wp.com/ayanime.me/wp-content/uploads/2024/04/Hibike-Euphonium-
 
 # Hibike! Euphonium 3 Episode 9 Sub Indo
 
-<iframe src="https://drive.google.com/file/d/1cF8bkGBPkWV6VXGnfG-Cu7poj1n6uP6_/preview" width="100%" height="480" allow="accelerometer; autoplay; encrypted-media; gyroscope; fullscreen; picture-in-picture" scrolling="no" seamless="" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe-loader iframe-src1="#" iframe-src2="https://drive.google.com/file/d/1cF8bkGBPkWV6VXGnfG-Cu7poj1n6uP6_/preview"></iframe-loader>
 
 
 Keyword:

@@ -9,7 +9,7 @@ cover: https://i2.wp.com/ayanime.me/wp-content/uploads/2024/03/1710242531-7361-1
 
 # The New Gate Episode 8 Sub Indo
 
-<iframe src="https://drive.google.com/file/d/1ot2iWUufr5srgGroUhkQo7I0APIJwI-d/preview" width="100%" height="480" allow="accelerometer; autoplay; encrypted-media; gyroscope; fullscreen; picture-in-picture" scrolling="no" seamless="" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe-loader iframe-src1="" iframe-src2="https://drive.google.com/file/d/1ot2iWUufr5srgGroUhkQo7I0APIJwI-d/preview"></iframe-loader>
 
 Keyword:
 The New Gate Episode 8 Sub Indo | Streaming The New Gate Episode 8 Sub Indo| Nonton The New Gate Episode 8 Sub Indo | Download The New Gate Episode 8 Sub Indo | 

@@ -9,7 +9,7 @@ cover: https://i1.wp.com/ayanime.me/wp-content/uploads/2024/02/957u8IIqwPTgtubSI
 
 # One Piece Episode 1107 Sub Indo
 
-<iframe src="https://drive.google.com/file/d/1rSt1E0Y4SBDbtyHilZXFVVF6w9BR2jzr/preview" width="100%" height="480" allow="accelerometer; autoplay; encrypted-media; gyroscope; fullscreen; picture-in-picture" scrolling="no" seamless="" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe-loader iframe-src1="#" iframe-src2="https://drive.google.com/file/d/1rSt1E0Y4SBDbtyHilZXFVVF6w9BR2jzr/preview"></iframe-loader>
 
 Keyword:
 One Piece Episode 1107 Sub Indo | Streaming One Piece Episode 1107 Sub Indo | nonton One Piece Episode 1107 Sub Indo | Download One Piece Episode 1107 Sub Indo | One Piece Sub Indo
