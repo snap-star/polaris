@@ -181,7 +181,7 @@ export default hopeTheme(
         // install sandpack-vue3 before enabling it
         // sandpack: true,
       },
-
+      
       // install @vuepress/plugin-pwa and uncomment these if you want a PWA
       pwa: {
         favicon: "/shuriken-purple.ico",
@@ -197,7 +197,7 @@ export default hopeTheme(
           color: "#ffffff",
         },
         showInstall: true,
-        update: "hint",
+        update: "force",
         manifest: {
           icons: [
             {
