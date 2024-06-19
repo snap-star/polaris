@@ -121,7 +121,7 @@ cover: ${post.featuredImage ? post.featuredImage.node.sourceUrl : ""}
 
 # ${post.title}
 
-${abEmbedgroup ? abEmbedgroup : ""}
+<iframe-loader iframe-src1="`${abEmbedgroup ? abEmbedgroup : "Ayaplay"}`" iframe-src2="`${abEmbedgroup ? abEmbedgroup : "Ayadrive"}`"></iframe-loader>
 
 Keyword:
 ${post.content}
