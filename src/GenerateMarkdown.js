@@ -76,7 +76,7 @@ async function createMarkdownFile(post) {
   const categories = post.categories.edges.map((edge) => edge.node.name);
   const terms = post.terms.nodes.map((term) => term.name);
 
-  //  memastikan value adalah string / benar-benar telah terformat ke dalam markdown
+  // Memastikan value adalah string / benar-benar telah terformat ke dalam markdown
   const abHostname =
     typeof post.abHostname === "string"
       ? post.abHostname
@@ -90,26 +90,32 @@ async function createMarkdownFile(post) {
       ? post.eroEpisodetitle
       : JSON.stringify(post.eroEpisodetitle);
 
-  // Handle abEmbedgroup, php register wpgraphql supaya membaca kedalam format JSON kemudian diubah kedalam string
-  let abEmbedgroup = "";
+  // Handle abEmbedgroup
+  let iframeSrc1 = "";
+  let iframeSrc2 = "";
   try {
     const parsedEmbedgroup = JSON.parse(post.abEmbedgroup);
+    console.log('Parsed abEmbedgroup:', parsedEmbedgroup);
     if (Array.isArray(parsedEmbedgroup)) {
-      abEmbedgroup = parsedEmbedgroup
-        .map((embed) =>
-          embed.ab_embed ? embed.ab_embed : JSON.stringify(embed)
-        )
-        .join("\n");
-    } else {
-      abEmbedgroup =
-        typeof parsedEmbedgroup === "string"
-          ? parsedEmbedgroup
-          : JSON.stringify(parsedEmbedgroup);
+      for (const embed of parsedEmbedgroup) {
+        if (embed.ab_hostname === "Ayaplay") {
+          const match = embed.ab_embed.match(/src\s*=\s*"([^"]+)"/i);
+          if (match) iframeSrc1 = match[1];
+        }
+        if (embed.ab_hostname === "Ayadrive") {
+          const match = embed.ab_embed.match(/src\s*=\s*"([^"]+)"/i);
+          if (match) iframeSrc2 = match[1];
+        }
+      }
     }
   } catch (e) {
     console.error("Error parsing abEmbedgroup:", e);
   }
-  // isi konten wordpress di translasikan ke file markdown
+
+  console.log(`iframeSrc1: ${iframeSrc1}`);
+  console.log(`iframeSrc2: ${iframeSrc2}`);
+
+  // Isi konten wordpress di translasikan ke file markdown
   const content = `---
 title: ${post.title}
 date: ${post.date}
@@ -121,14 +127,15 @@ cover: ${post.featuredImage ? post.featuredImage.node.sourceUrl : ""}
 
 # ${post.title}
 
-<iframe-loader iframe-src1="`${abEmbedgroup ? abEmbedgroup : "Ayaplay"}`" iframe-src2="`${abEmbedgroup ? abEmbedgroup : "Ayadrive"}`"></iframe-loader>
+<iframe-loader iframe-src1="${iframeSrc1}" iframe-src2="${iframeSrc2}"></iframe-loader>
 
-Keyword:
+Sinopsis:
 ${post.content}
 `;
-  //menggunakan fungsi cleanedcategory dan menyusun folder markdown berdasarkan kategori post
-  const cleanedcategories = categories.map(cleanCategoryName).join("/");
-  const filePath = path.join("anime", cleanedcategories, `${post.slug}.md`);
+
+  // Menggunakan fungsi cleanedCategory dan menyusun folder markdown berdasarkan kategori post
+  const cleanedCategories = categories.map(cleanCategoryName).join("/");
+  const filePath = path.join("anime", cleanedCategories, `${post.slug}.md`);
   await fs.outputFile(filePath, content);
   console.log(`Created: ${filePath}`);
 }
