@@ -103,6 +103,7 @@ export default {
     transform 0.3s,
     border 0.3s;
   border: 2px solid transparent;
+  box-shadow: inset;
 }
 
 .anime-card:hover {
@@ -112,7 +113,7 @@ export default {
 
 .anime-cover {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -171,8 +172,8 @@ export default {
   position: absolute;
   bottom: 8px;
   left: 8px;
-  background-color: yellow;
-  color: black;
+  background-color: #4DB6AC;
+  color: whitesmoke;
   padding: 2px 4px;
   border-radius: 4px;
   font-size: small;
@@ -182,7 +183,7 @@ export default {
   position: absolute;
   bottom: 8px;
   right: 8px;
-  background-color: blue;
+  background-color: #29B6F6;
   color: white;
   padding: 2px 4px;
   border-radius: 4px;

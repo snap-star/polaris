@@ -6,6 +6,19 @@
     height: 480;
     width: 100%;
 }
+
+.vp-article-list {
+    margin-top: calc(-0.5rem - var(--navbar-height));
+    padding-top: calc(var(--navbar-height) + 0.5rem);
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.vp-article-item {
+    width: 60%;
+}
 /* Wrapper untuk seluruh artikel */
 // .vp-article-wrapper {
 //     display: grid;

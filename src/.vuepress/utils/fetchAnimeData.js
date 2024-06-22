@@ -36,7 +36,7 @@ const query = gql`
   }
 `;
 
-//ini adalah fungsi membersihkan dan membuat link menjadi huruf kecil dan menambahkan underscore "_"
+// Fungsi untuk membersihkan dan membuat link menjadi huruf kecil serta menambahkan underscore "_"
 function cleanCategoryName(category) {
   return category.replace(/[^a-z0-9]/gi, "_").toLowerCase();
 }
@@ -45,20 +45,29 @@ export async function fetchAnimeData(first, after = null) {
   try {
     const variables = { first, after };
     const data = await graphQLClient.request(query, variables);
+
+    console.log("Fetched Data:", data.posts.nodes); // Log data yang diterima untuk debugging
+
     return {
       animeList: data.posts.nodes.map((post) => {
         const categories = post.categories.nodes.map((category) => category.name);
-        const categoryPath = categories.map(cleanCategoryName).join(","); //ini adalah fungsi untuk me read data atau mapping data categories
-        return{
-          id: post.id, //post id
-          title: post.title, //mengambil nama anime
-          coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl : "", //mengambil gambar
+        const categoryPath = categories.map(cleanCategoryName).join(","); // Fungsi untuk membaca dan memetakan data categories
+        
+        // Proses data eroStatus, eroHot, eroType dengan benar
+        const eroStatus = post.eroStatus || "Ongoing" || "Upcoming" || "Completed";
+        const eroHot = post.eroHot || "Yes" || "No";
+        const eroType = post.eroType || "TV" || "Movie";
+
+        return {
+          id: post.id, // post id
+          title: post.title, // mengambil nama anime
+          coverImage: post.featuredImage ? post.featuredImage.node.sourceUrl : "", // mengambil gambar
           episode: post.eroEpisodebaru, // mengambil data episode untuk badge
-          category: `${JSON.stringify(categories)}`,
-          link: `/anime/${categoryPath}/${post.slug}`, //path link anime di web
-          eroStatus: post.eroStatus,
-          eroHot: post.eroHot,
-          eroType: post.eroType,
+          category: JSON.stringify(categories),
+          link: `/anime/${categoryPath}/${post.slug}`, // path link anime di web
+          eroStatus,
+          eroHot,
+          eroType,
         };
       }),
       pageInfo: data.posts.pageInfo,

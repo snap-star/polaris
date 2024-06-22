@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* .vuepress/styles/index.styl or .vuepress/styles/index.css */
 .post {
     max-width: 800px;
