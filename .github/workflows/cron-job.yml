@@ -1,0 +1,18 @@
+name: Schedule Cron Job
+
+on:
+  schedule:
+    # Atur cron job untuk berjalan setiap hari pada jam 00:00
+    - cron: '0 0 * * *'
+
+jobs:
+  run-cron-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Call Vercel API
+        run: |
+          curl -X GET https://ayanime.id/api/cron

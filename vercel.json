@@ -1,6 +1,15 @@
 {
-  "crons": [{
-    "path": "/src/GenerateMarkdown",
-    "schedule": "0 10 * * *"
-  }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "pages/api/cron.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/cron",
+      "dest": "/api/cron.js"
+    }
+  ]
 }
