@@ -54,9 +54,9 @@ export async function fetchAnimeData(first, after = null) {
         const categoryPath = categories.map(cleanCategoryName).join(","); // Fungsi untuk membaca dan memetakan data categories
         
         // Proses data eroStatus, eroHot, eroType dengan benar
-        const eroStatus = post.eroStatus || "Ongoing" || "Upcoming" || "Completed";
-        const eroHot = post.eroHot || "Yes" || "No";
-        const eroType = post.eroType || "TV" || "Movie";
+        const eroStatus = `${JSON.stringify(post.eroStatus)}` || "Ongoing" || "Upcoming" || "Completed" || "Hiatus" || "Finished" || "";
+        const eroHot = `${JSON.stringify(post.eroHot)}` || "Yes" || "No";
+        const eroType = `${JSON.stringify(post.eroType)}` || "TV" || "Movie" || "OVA" || "ONA" || "";
 
         return {
           id: post.id, // post id
