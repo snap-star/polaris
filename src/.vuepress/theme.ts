@@ -22,7 +22,7 @@ export default hopeTheme(
     logo: "/logo-black.svg",
     logoDark: "/logo-white.svg",
     //repository setting
-    repo: "buffedcream/polar-stream",
+    repo: "snap-star/polaris",
     //root project directory
     docsDir: "src",
 
