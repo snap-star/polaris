@@ -1,2 +1,12 @@
 // you can change config here
-$theme-colors: #5c7aea, #64B5F6, #d35400, #f39c12, #E53935, #FF8A80, #8e44ad, #2c3e50, #FFEB3B;
+$theme-colors: #5c7aea, #64B5F6, #f39c12, #E53935, #FF8A80;
+
+// shadow
+$box-shadow: (
+  light: #f0f1f2,
+  dark: #282a32,
+) !default;
+$card-shadow: (
+  light: rgb(0 0 0 / 15%),
+  dark: rgb(0 0 0 / 30%),
+) !default;
