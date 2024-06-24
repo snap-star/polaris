@@ -35,9 +35,9 @@ export default defineUserConfig({
   //bagian plugin end
 
   //theme customize start
-  base: "/", //root
+  base: "polaris", //root
   lang: "en-US", //bahasa yang dipakai
-  title: "Polaris", //judul program
+  title: "Ayanime.id", //judul program
   description: "Template Anime Streaming Terbaru", //deskripsi program
   theme: theme,
     //syntax mereplace komponen
