@@ -15,4 +15,4 @@ jobs:
 
       - name: Call Vercel API
         run: |
-          curl -X GET https://ayanime.id/api/cron.js
+          curl -X GET https://ayanimeid.vercel.app/api/cron.js
