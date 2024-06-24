@@ -9,7 +9,7 @@ export default hopeTheme(
     //displaying fullscreen button
     fullscreen: true,
     //host
-    hostname: "https://ayanime.id",
+    hostname: "https://snap-star.github.io/",
     //author info bawah post
     author: {
       name: "Chigusa",
