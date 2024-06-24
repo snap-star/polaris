@@ -1,0 +1,1 @@
+import{bd as i,be as t}from"./app-ClVCIYzK.js";class e{constructor(s){this.La=s}Xa(){i(this.ya)&&this.fg()}$(){t(this.ya)&&window.cancelAnimationFrame(this.ya),this.ya=void 0}fg(){this.ya=window.requestAnimationFrame(()=>{i(this.ya)||(this.La(),this.fg())})}}export{e as R};
