@@ -20,8 +20,8 @@ actions:
     icon: info-circle
     type: secondary
 highlights:
-  - header: Stream Anime Kesukaan Kamu
-    description: Tersedia Banyak Kualitas Stream 480p, 720p, 1080p
+  - header: Stream Anime Kesukaanmu Gratis
+    description:
     image: #image
     bgimage: #bgimage
     bgimageDark: #bgimagedark
@@ -29,18 +29,29 @@ highlights:
       background-repeat: repeat
       background-size: initial
     features:
-      - title: Subtitle
-        icon: closed-captioning
-        details: Sub indo dong tentunya!
-        link: .#
-      - title: Download
+      # - title: Subtitle
+      #   icon: closed-captioning
+      #   details: Anime sub indo
+      #   link: 
+      - title: Link Download
         icon: download
-        details: Resolusi SD, HD, FHD
-        link: .#
+        details: Google drive, Acefile, Mixdrop, Qiwi.
+        link: #
+      - title: Resolusi
+        icon: tv
+        details: 480p, 720p, 1080p
       - title: Update
         icon: clock
-        details: Update Setiap Hari
-        link: .#
+        details: Setiap Hari
+        link: #
+      - title: PWA Ready
+        icon: rocket
+        details: Install langsung dari browser tanpa download APK
+        link: #
+      # - title: Clean Ui
+      #   icon: brush
+      #   details: Simple UI
+      #   link:
 ---
 
 ::: warning

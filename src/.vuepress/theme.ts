@@ -197,7 +197,7 @@ export default hopeTheme(
           color: "#ffffff",
         },
         showInstall: true,
-        update: "force",
+        update: "hint",
         manifest: {
           icons: [
             {

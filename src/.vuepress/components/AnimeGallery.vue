@@ -13,8 +13,8 @@
         <span v-if="anime.eroHot" class="hot-badge">
           <i class="fas fa-fire"></i>
         </span>
-        <span class="status-badge">{{ anime.eroStatus }}</span>
-        <span class="type-badge">{{ anime.eroType }}</span>
+        <span class="status-badge">{{ `${JSON.parse(anime.eroStatus)}` }}</span>
+        <span class="type-badge">{{ `${JSON.parse(anime.eroType)}` }}</span>
         <div class="anime-details">
           <router-link :to="anime.link">
             <h3 class="anime-title">{{ `${JSON.parse(anime.category)}` }}</h3>
