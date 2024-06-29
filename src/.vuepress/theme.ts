@@ -181,9 +181,10 @@ export default hopeTheme(
         // install sandpack-vue3 before enabling it
         // sandpack: true,
       },
-      
       // install @vuepress/plugin-pwa and uncomment these if you want a PWA
       pwa: {
+        showInstall: true,
+        update: "available",
         favicon: "/shuriken-purple.ico",
         cacheHTML: true,
         cacheImage: true,
@@ -196,9 +197,15 @@ export default hopeTheme(
           image: "/shuriken-purple.svg",
           color: "#ffffff",
         },
-        showInstall: true,
-        update: "hint",
         manifest: {
+          name: "Ayanime.id",
+          short_name: "Ayanime.id",
+          description: "Nonton Anime Subtitle Indonesia",
+          lang:  "en-US",
+          display: "standalone",
+          prefer_related_applications: false,
+          orientation: "portrait-primary",
+          start_url: ".",
           icons: [
             {
               src: "/shuriken-purple.svg",
@@ -230,7 +237,7 @@ export default hopeTheme(
               url: "/pages/anime-gallery.html",
               icons: [
                 {
-                  src: "/assets/icon/guide-maskable.png",
+                  src: "/shuriken-purple.svg",
                   sizes: "192x192",
                   purpose: "maskable",
                   type: "image/png",

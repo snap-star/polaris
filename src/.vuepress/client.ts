@@ -16,7 +16,6 @@ import Dashboard from "./components/Dashboard.vue"; //dashboard layout still nee
 import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api fetch on myanimelist.com TODO: still need develop
 import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce mouse on hover
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss" //shining feature
-
 import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update when new content available
 import { onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";

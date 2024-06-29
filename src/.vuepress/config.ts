@@ -21,6 +21,7 @@ export default defineUserConfig({
     ],
     //import tailwind
     ['link', { rel: 'stylesheet', href: './vuepress/styles/index.css' }],
+    ['link', { rel: 'manifest',  href: 'src/.vuepress/dist/manifest.webmanifest' }],
     //import bootstrap style
     //['link', { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' }]
   ],
@@ -38,7 +39,7 @@ export default defineUserConfig({
   base: "/", //root
   lang: "en-US", //bahasa yang dipakai
   title: "Ayanime.id", //judul program
-  description: "Template Anime Streaming Terbaru", //deskripsi program
+  description: "Nonton Anime Subtitle Indonesia Terbaru", //deskripsi program
   theme: theme,
     //syntax mereplace komponen
     // alias: {
