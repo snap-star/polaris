@@ -5,7 +5,7 @@ export default {
   // site config
   lang: "en-US",
   title: "Ayanime",
-  description: "Anime Streaming Template",
+  description: "Nonton Anime Sub Indonesia",
 
   // theme
   theme: hopeTheme({

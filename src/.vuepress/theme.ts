@@ -8,8 +8,8 @@ export default hopeTheme(
     darkmode: "toggle",
     //displaying fullscreen button
     fullscreen: true,
-    //host
-    hostname: "https://snap-star.github.io/",
+    //hostname untuk sitemap
+    hostname: "https://ayanime.id/",
     //author info bawah post
     author: {
       name: "Chigusa",
