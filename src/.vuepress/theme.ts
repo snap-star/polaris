@@ -185,6 +185,7 @@ export default hopeTheme(
       pwa: {
         showInstall: true,
         update: "available",
+        themeColor: "#5c7aea",
         favicon: "/shuriken-purple.ico",
         cacheHTML: true,
         cacheImage: true,
