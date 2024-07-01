@@ -1,5 +1,5 @@
 ---
-title: Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2 Episode 12 Sub Indo
+title: Mushoku Tensei 2 Isekai Ittara Honki Dasu Part 2 Episode 12 Sub Indo
 date: 2024-07-01T00:33:24
 slug: mushoku-tensei-ii-isekai-ittara-honki-dasu-part-2-episode-12-sub-indo
 categories: ["Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2"]
