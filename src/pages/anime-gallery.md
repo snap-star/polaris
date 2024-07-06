@@ -12,8 +12,4 @@ index: true
 containerClass: fancy-container
 ---
 
-::: info
-Jika Tidak Gambar atau tidak respon harap refresh browser :)
-:::
-
 <AnimeGallery />
