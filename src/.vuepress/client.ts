@@ -19,6 +19,7 @@ import "vuepress-theme-hope/presets/shinning-feature-panel.scss" //shining featu
 import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update when new content available
 import { onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
+import AnimeCarousel from "./components/AnimeCarousel.vue";
 
 export default defineClientConfig({
 
@@ -42,6 +43,7 @@ export default defineClientConfig({
     app.component("Login", Login);
     app.component("Dashboard", Dashboard);
     app.component('IframeLoader', IframeLoader);
+    app.component('AnimeCarousel', AnimeCarousel);
   },
   //custom setup script
   setup(){
