@@ -15,11 +15,13 @@ import Login from './components/Login.vue'; //login form TODO: still need develo
 import Dashboard from "./components/Dashboard.vue"; //dashboard layout still need develop
 import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api fetch on myanimelist.com TODO: still need develop
 import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce mouse on hover
-import "vuepress-theme-hope/presets/shinning-feature-panel.scss" //shining feature
+import "vuepress-theme-hope/presets/shinning-feature-panel.scss"; //shining feature
 import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update when new content available
 import { onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
 import AnimeCarousel from "./components/AnimeCarousel.vue";
+import { createVuestic, VuesticPlugin } from "vuestic-ui";
+import "vuestic-ui/css";
 
 export default defineClientConfig({
 
@@ -28,6 +30,7 @@ export default defineClientConfig({
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
   },
  enhance: ({  app, router, siteData }) => {
+    app.use(createVuestic());
     app.component("WordpressPost", WordpressPost);
     app.component("wpost", wpost);
     app.component("animeblog", animeblog);

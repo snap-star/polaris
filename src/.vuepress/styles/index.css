@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import"https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap";
+@import"https://fonts.googleapis.com/icon?family=Material+Icons";
 
 /* .vuepress/styles/index.styl or .vuepress/styles/index.css */
 .post {
