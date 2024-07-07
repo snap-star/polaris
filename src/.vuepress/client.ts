@@ -20,6 +20,8 @@ import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update 
 import { onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
 import AnimeCarousel from "./components/AnimeCarousel.vue";
+import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
+import 'vue3-carousel/dist/carousel.css';
 
 export default defineClientConfig({
 
@@ -27,7 +29,7 @@ export default defineClientConfig({
     //added AnimeLayout
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
   },
- enhance: ({ app, router, siteData }) => {
+ enhance: ({  app, router, siteData }) => {
     app.component("WordpressPost", WordpressPost);
     app.component("wpost", wpost);
     app.component("animeblog", animeblog);
@@ -44,16 +46,19 @@ export default defineClientConfig({
     app.component("Dashboard", Dashboard);
     app.component('IframeLoader', IframeLoader);
     app.component('AnimeCarousel', AnimeCarousel);
+    app.component('Carousel', Carousel);
+    app.component('Slide', Slide);
+    app.component('Navigation', Navigation);
+    app.component('Pagination', Pagination);
+
   },
   //custom setup script
   setup(){
-    setupRunningTimeFooter(
-      new Date("2024-05-18"),
-      {
-        "/": "Server Uptime: :day hari :hour Jam :minute Menit :second Detik"
-      },
-      true,
-    );
+    {
+      if (typeof window !== 'undefined') {
+        window.addEventListener('touchmove', () => {}, { passive: true });
+      }
+    }
     //pwa config
     onMounted (() => {
       forceUpdate()

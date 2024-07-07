@@ -9,7 +9,7 @@
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:dev": "vuepress-vite dev src",
     "docs:update-package": "npx vp-update",
-    "generate:anime-json": "node generateAnime.js"
+    "generate:anime-json": "node generateAnimeJson.js"
   },
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",
@@ -29,13 +29,13 @@
     "tailwindcss": "^3.4.4",
     "vite-plugin-external": "^4.3.1",
     "vue": "^3.4.31",
-    "vue-carousel": "^0.18.0",
     "vuepress": "2.0.0-rc.14",
     "vuepress-theme-hope": "2.0.0-rc.50"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^2.1.3",
     "@auth0/auth0-vue": "^2.3.3",
+    "@primevue/themes": "^4.0.0",
     "@vue/repl": "^4.2.1",
     "@vuepress/plugin-docsearch": "2.0.0-rc.37",
     "@vuepress/plugin-feed": "2.0.0-rc.37",
@@ -65,11 +65,12 @@
     "mongoose": "^8.4.1",
     "mpegts.js": "^1.7.3",
     "primeicons": "^7.0.0",
-    "primevue": "^4.0.0-rc.2",
+    "primevue": "^4.0.0",
     "react": "^18.3.1",
     "request": "^2.88.2",
     "vidstack": "^1.11.21",
     "vue-router": "^4.4.0",
+    "vue3-carousel": "^0.3.3",
     "vuepress-plugin-md-enhance": "2.0.0-rc.50",
     "vuepress-plugin-search-pro": "2.0.0-rc.50",
     "vuex": "^4.1.0",

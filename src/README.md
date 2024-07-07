@@ -58,6 +58,10 @@ highlights:
 Web ini masih dalam tahap development :) web origin ada di https://ayanime.me/
 :::
 
+
+<AnimeCarousel />
+
+
 ## Latest Release
 
 <AnimeGallery />
