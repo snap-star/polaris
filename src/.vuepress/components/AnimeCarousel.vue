@@ -3,8 +3,11 @@
     <Slide v-for="anime in animes.slice(0, 5)" :key="anime.title">
       <div class="anime-item p-4">
         <img v-if="anime.cover" :src="anime.cover" :alt="anime.title" class="anime-cover" />
-        <h3 class="mt-2 text-lg font-semibold">{{ anime.categories }}</h3>
-        <p class="text-sm">{{ anime.shortTitle }}</p>
+        <div class="anime-details">
+          <h3 class="anime-title">{{ anime.categories.join(', ') }}</h3>
+          <p class="anime-short-title">{{ anime.shortTitle }}</p>
+          <a :href="anime.postLink" target="_blank" class="anime-post-button">Tonton!</a>
+        </div>
       </div>
     </Slide>
 
@@ -52,23 +55,20 @@ const shuffleArray = (array) => {
 }
 
 .anime-item {
-  text-align: left;
-  text-anchor: middle;
-  text-decoration: none;
+  text-align: center;
   background-color: var(--theme-color);
   color: var(--vc-clr-white);
   border-radius: 8px;
   overflow: hidden;
-  padding: 0px;
+  padding: 0;
 }
 
 .anime-cover {
   width: 900px;
-  height: 200px; /* Set height for the banner */
+  height: 200px; /* Update height for the banner */
   object-fit: cover; /* Crop the image to fit the container */
   border-radius: 8px; /* Optional: add rounded corners to the image */
   pointer-events: none;
-  overflow: hidden;
 }
 
 .carousel__item {
@@ -87,6 +87,48 @@ const shuffleArray = (array) => {
 .carousel__next {
   box-sizing: content-box;
   border: 5px solid var(--vc-clr-white);
+}
+
+.anime-details {
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 8px;
+  width: calc(100% - 20px);
+}
+
+.anime-title {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--vc-clr-white);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.anime-short-title {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  color: var(--vc-clr-white);
+}
+
+.anime-post-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  color: var(--theme-color); /* Tailwind blue-800 */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.anime-post-button:hover {
+  background-color: #e2e8f0; /* Tailwind gray-200 */
 }
 
 @media (max-width: 768px) {
