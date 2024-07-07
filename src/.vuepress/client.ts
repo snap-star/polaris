@@ -20,8 +20,6 @@ import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update 
 import { onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
 import AnimeCarousel from "./components/AnimeCarousel.vue";
-import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
 
 export default defineClientConfig({
 
@@ -46,10 +44,6 @@ export default defineClientConfig({
     app.component("Dashboard", Dashboard);
     app.component('IframeLoader', IframeLoader);
     app.component('AnimeCarousel', AnimeCarousel);
-    app.component('Carousel', Carousel);
-    app.component('Slide', Slide);
-    app.component('Navigation', Navigation);
-    app.component('Pagination', Pagination);
 
   },
   //custom setup script
