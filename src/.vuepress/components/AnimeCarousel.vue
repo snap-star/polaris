@@ -6,7 +6,7 @@
         <div class="anime-details">
           <h3 class="anime-title">{{ anime.categories.join(', ') }}</h3>
           <p class="anime-short-title">{{ anime.shortTitle }}</p>
-          <a :href="anime.postLink" target="_blank" class="anime-post-button">Tonton!</a>
+          <a :href="anime.slug" target="_blank" class="anime-post-button">Tonton!</a>
         </div>
       </div>
     </Slide>

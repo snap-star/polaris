@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const animeDirectory = path.join(__dirname, 'src/anime');
-const outputJson = path.join(__dirname, '../public/anime.json');
+const outputJson = path.join(__dirname, 'src/.vuepress/public/anime.json');
 
 // Fungsi untuk mendapatkan semua file markdown secara rekursif
 const getMarkdownFiles = (dir) => {
