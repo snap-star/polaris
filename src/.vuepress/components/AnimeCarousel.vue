@@ -6,7 +6,7 @@
         <div class="anime-details">
           <h3 class="anime-title">{{ anime.categories.join(', ') }}</h3>
           <p class="anime-short-title">{{ anime.shortTitle }}</p>
-          <a :href="anime.slug" target="_blank" class="anime-post-button">Tonton!</a>
+          <a :href="generateAnimeLink(anime)" target="_blank" class="anime-post-button">Tonton!</a>
         </div>
       </div>
     </Slide>
@@ -45,6 +45,15 @@ const shuffleArray = (array) => {
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
+};
+
+const cleanCategoryName = (category) => {
+  return category.replace(/[^a-z0-9]/gi, "_").toLowerCase();
+};
+
+const generateAnimeLink = (anime) => {
+  const categories = anime.categories.map(cleanCategoryName).join(',');
+  return `/anime/${categories}/${anime.slug}`;
 };
 </script>
 
