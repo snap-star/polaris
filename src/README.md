@@ -22,8 +22,8 @@ actions:
 highlights:
   - header: Stream Anime Kesukaanmu Gratis
     description:
-    image: #image
-    bgimage: #bgimage
+    image: 
+    bgimage: #bgimagelight
     bgimageDark: #bgimagedark
     bgimageStyle:
       background-repeat: repeat
@@ -61,7 +61,17 @@ Web ini masih dalam tahap development :) web origin ada di https://ayanime.me/
 
 <AnimeCarousel />
 
-
 ## Latest Release
 
 <AnimeGallery />
+
+## On Going
+
+
+
+## Upcoming
+
+
+
+## Movie
+

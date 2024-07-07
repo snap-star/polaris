@@ -14,3 +14,8 @@ npm run docs:build
 ```
 npx vp-update
 ```
+
+## generate carousel
+```
+npm run generate:anime-json
+```
