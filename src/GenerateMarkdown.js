@@ -137,7 +137,7 @@ ${post.content}
   const cleanedCategories = categories.map(cleanCategoryName).join("/");
   const filePath = path.join("anime", cleanedCategories, `${post.slug}.md`);
   await fs.outputFile(filePath, content);
-  console.log(`Created: ${filePath}`);
+  console.log(`File markdown Created: ${filePath}`);
 }
 
 // Fungsi utama untuk mengambil data dan membuat file markdown
@@ -152,7 +152,7 @@ const generateMarkdownFiles = async () => {
 
     console.log("File markdown telah dibuat.");
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error membuat file markdown:", error);
   }
 };
 
