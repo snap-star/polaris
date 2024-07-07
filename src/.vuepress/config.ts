@@ -21,7 +21,7 @@ export default defineUserConfig({
     ],
     //import tailwind
     ['link', { rel: 'stylesheet', href: './vuepress/styles/index.css' }],
-    ['link', { rel: 'manifest',  href: 'src/.vuepress/dist/manifest.webmanifest' }],
+    // ['link', { rel: 'manifest',  href: 'src/.vuepress/dist/manifest.webmanifest' }],
     //import bootstrap style
     //['link', { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' }]
   ],

@@ -87,6 +87,7 @@ export default {
 <style scoped>
 .anime-gallery-container {
   padding: auto;
+  border-radius: 8px;
 }
 
 .anime-gallery {

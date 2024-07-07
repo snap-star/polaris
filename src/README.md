@@ -1,4 +1,5 @@
 ---
+index: false
 containerclass: home
 home: true
 icon: home
@@ -6,9 +7,9 @@ title: Home
 heroImage: /shuriken-purple.svg
 heroText: Ayanime.id
 tagline: Nonton Streaming Anime Terbaru Sub Indo Kualitas HD dan Full HD
-bgimage: #setimagelight
-bgimagedark: #setimagedark
-bgimagestyle:
+bgImage: https://ayanime.me/wp-content/uploads/2024/07/banner21-scaled.jpg
+bgImageDark: https://ayanime.me/wp-content/uploads/2024/07/banner6.jpg
+bgimageStyle:
   background-attachment: fixed
 actions:
   - text: Cek New Release!
@@ -23,8 +24,8 @@ highlights:
   - header: Stream Anime Kesukaanmu Gratis
     description:
     image: 
-    bgimage: #bgimagelight
-    bgimageDark: #bgimagedark
+    bgImage: https://ayanime.me/wp-content/uploads/2024/07/banner23-scaled.jpg
+    bgImageDark: https://ayanime.me/wp-content/uploads/2024/07/banner10-scaled.jpg
     bgimageStyle:
       background-repeat: repeat
       background-size: initial
