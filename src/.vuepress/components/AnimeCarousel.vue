@@ -1,31 +1,36 @@
 <template>
-  <va-carousel
-    class="custom-carousel"
-    :autoplay="5000"
-    :items-to-show="1"
-    :items-to-scroll="1"
+  <VaCarousel
+    v-if="animes.length > 0"
+    :items="animes"
+    stateful
+    autoscroll
+    :autoscroll-interval="5000"
     infinite
-    fade
   >
-    <template v-for="anime in animes.slice(0, 5)">
-      <div _key: ((anime.title)) class="va-carousel__slide">
+    <template #default="{ item }">
+      <div class="va-carousel__slide">
         <div class="anime-item p-4">
-          <img v-if="anime.cover" :src="anime.cover" :alt="anime.title" class="anime-cover" />
+          <img v-if="item.cover" :src="item.cover" :alt="item.title" class="anime-cover" />
           <div class="anime-details">
-            <h3 class="anime-title">{{ anime.categories.join(', ') }}</h3>
-            <p class="anime-short-title">{{ anime.shortTitle }}</p>
-            <a :href="`/anime/${processCategory(anime.categories)}/${anime.slug}`" target="_blank" class="anime-post-button">Tonton!</a>
+            <h3 class="anime-title">{{ item.categories.join(', ') }}</h3>
+            <p class="anime-short-title">{{ item.shortTitle }}</p>
+            <VaButton 
+            round
+            href="`/anime/${processCategory(item.categories)}/${item.slug}`" target="_blank" class="anime-post-button"
+            >
+            Tonton!
+            </VaButton>
           </div>
         </div>
       </div>
     </template>
-  </va-carousel>
+  </VaCarousel>
+  <p v-else>Loading...</p>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { VaCarousel } from 'vuestic-ui';
-import 'vuestic-ui/css';
+import { VaCarousel, VaButton } from 'vuestic-ui';
 
 const animes = ref([]);
 
@@ -56,6 +61,7 @@ const processCategory = (categories) => {
 </script>
 
 <style scoped>
+@import"https://fonts.googleapis.com/icon?family=Material+Icons";
 .custom-carousel {
   --vc-clr-primary: #1d4ed8; /* Tailwind blue-800 */
   --vc-clr-white: #ffffff;
@@ -80,12 +86,14 @@ const processCategory = (categories) => {
 
 .anime-details {
   padding: 10px;
+  position-anchor: inherit;
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.210); /* Semi-transparent background */
+  justify-content: center;
   border-radius: 8px;
-  width: calc(100% - 20px);
+  width: fit-content;
 }
 
 .anime-title {
@@ -95,7 +103,7 @@ const processCategory = (categories) => {
   color: var(--vc-clr-white);
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: nowrap;;
 }
 
 .anime-short-title {
@@ -108,9 +116,7 @@ const processCategory = (categories) => {
   display: inline-block;
   margin-top: 10px;
   padding: 5px 10px;
-  background-color: #ffffff;
   color: var(--theme-color); /* Tailwind blue-800 */
-  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
