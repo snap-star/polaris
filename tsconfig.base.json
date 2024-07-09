@@ -31,7 +31,7 @@
       "sourceMap": true,
   
       // JavaScript
-      "allowJs": false,
+      "allowJs": true,
       "checkJs": false,
   
       // Interop Constraints
