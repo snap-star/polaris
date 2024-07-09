@@ -21,7 +21,6 @@ import { onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
 import AnimeCarousel from "./components/AnimeCarousel.vue";
 import { createVuestic, VuesticPlugin } from "vuestic-ui";
-import "vuestic-ui/css";
 
 export default defineClientConfig({
 
