@@ -6,19 +6,22 @@
     autoscroll
     :autoscroll-interval="5000"
     infinite
+    class="custom-carousel"
   >
     <template #default="{ item }">
       <div class="va-carousel__slide">
-        <div class="anime-item p-4">
+        <div class="anime-item">
           <img v-if="item.cover" :src="item.cover" :alt="item.title" class="anime-cover" />
           <div class="anime-details">
             <h3 class="anime-title">{{ item.categories.join(', ') }}</h3>
             <p class="anime-short-title">{{ item.shortTitle }}</p>
             <VaButton 
-            round
-            href="`/anime/${processCategory(item.categories)}/${item.slug}`" target="_blank" class="anime-post-button"
+              round
+              :href="`/anime/${processCategory(item.categories)}/${item.slug}`"
+              target="_blank"
+              class="anime-post-button"
             >
-            Tonton!
+              Tonton!
             </VaButton>
           </div>
         </div>
@@ -61,39 +64,40 @@ const processCategory = (categories) => {
 </script>
 
 <style scoped>
-@import"https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
 .custom-carousel {
   --vc-clr-primary: #1d4ed8; /* Tailwind blue-800 */
   --vc-clr-white: #ffffff;
 }
 
 .anime-item {
-  text-align: center;
-  background-color: var(--theme-color);
+  position: relative;
   color: var(--vc-clr-white);
   border-radius: 8px;
   overflow: hidden;
-  padding: 0;
+  text-overflow: clip;
 }
 
 .anime-cover {
-  width: 900px;
-  height: 400px; /* Update height for the banner */
-  object-fit: cover; /* Crop the image to fit the container */
-  border-radius: 8px; /* Optional: add rounded corners to the image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   pointer-events: none;
 }
 
 .anime-details {
-  padding: 10px;
-  position-anchor: inherit;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background: rgba(0, 0, 0, 0.210); /* Semi-transparent background */
-  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
   border-radius: 8px;
-  width: fit-content;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
 .anime-title {
@@ -101,9 +105,6 @@ const processCategory = (categories) => {
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--vc-clr-white);
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;;
 }
 
 .anime-short-title {
@@ -113,17 +114,15 @@ const processCategory = (categories) => {
 }
 
 .anime-post-button {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 10px;
-  color: var(--theme-color); /* Tailwind blue-800 */
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: var(--vc-clr-white);
+  background-color: var(--vc-clr-primary);
 }
 
 .anime-post-button:hover {
-  background-color: #e2e8f0; /* Tailwind gray-200 */
+  background-color: #2563eb; /* Tailwind blue-700 */
 }
 
 @media (max-width: 768px) {
