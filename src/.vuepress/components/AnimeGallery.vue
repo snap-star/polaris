@@ -39,6 +39,7 @@ import { fetchAnimeData } from "../utils/fetchAnimeData.js";
 export default {
   name: "AnimeGallery",
   setup() {
+    const loading = ref(true)
     const animeList = ref([]);
     const pageInfo = ref({});
     const page = ref(1);
@@ -222,5 +223,11 @@ export default {
   .anime-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+body {
+  margin: 0;
+}
+.example-showcase .el-loading-mask {
+  z-index: 9;
 }
 </style>

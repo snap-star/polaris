@@ -23,7 +23,6 @@ import AnimeCarousel from "./components/AnimeCarousel.vue";
 import { createVuestic, VuesticPlugin } from "vuestic-ui";
 
 export default defineClientConfig({
-
   layouts: {
     //added AnimeLayout
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,

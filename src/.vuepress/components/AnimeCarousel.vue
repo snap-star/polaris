@@ -1,39 +1,47 @@
 <template>
-  <VaCarousel
-    v-if="animes.length > 0"
-    :items="animes"
-    stateful
-    autoscroll
-    :autoscroll-interval="5000"
-    infinite
-    class="custom-carousel"
-  >
-    <template #default="{ item }">
-      <div class="va-carousel__slide">
+  <div>
+    <el-carousel
+      v-if="animes.length > 0"
+      height="300px"
+      :autoplay="true"
+      :pause-on-hover="true"
+    >
+      <el-carousel-item v-for="item in animes" :key="item.slug" arrow="hover">
         <div class="anime-item">
           <img v-if="item.cover" :src="item.cover" :alt="item.title" class="anime-cover" />
           <div class="anime-details">
             <h3 class="anime-title">{{ item.categories.join(', ') }}</h3>
+            <el-button
+            type="primary"
+            plain
+            size="small"
+            :dark="true"
+              >
             <p class="anime-short-title">{{ item.shortTitle }}</p>
-            <VaButton 
-              round
+            </el-button>
+            <el-button
+              type="primary"
+              size="large"
+              tag="a"
               :href="`/anime/${processCategory(item.categories)}/${item.slug}`"
               target="_blank"
               class="anime-post-button"
+              icon="VideoPlay"
             >
               Tonton!
-            </VaButton>
+            </el-button>
           </div>
         </div>
-      </div>
-    </template>
-  </VaCarousel>
-  <p v-else>Loading...</p>
+      </el-carousel-item>
+    </el-carousel>
+    <p v-else>Loading...</p>
+  </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { VaCarousel, VaButton } from 'vuestic-ui';
+import { ElCarousel, ElCarouselItem, ElButton } from 'element-plus';
+import 'element-plus/dist/index.css'
 
 const animes = ref([]);
 
@@ -64,65 +72,61 @@ const processCategory = (categories) => {
 </script>
 
 <style scoped>
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
-
-.custom-carousel {
-  --vc-clr-primary: #1d4ed8; /* Tailwind blue-800 */
-  --vc-clr-white: #ffffff;
-}
-
 .anime-item {
+  text-align: center;
   position: relative;
-  color: var(--vc-clr-white);
-  border-radius: 8px;
-  overflow: hidden;
-  text-overflow: clip;
 }
 
 .anime-cover {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
   pointer-events: none;
 }
 
 .anime-details {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
-  border-radius: 8px;
-  width: calc(100% - 20px);
+  font-size: 1rem;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .anime-title {
-  margin-bottom: 10px;
-  font-size: 1.25rem;
+  margin: 0;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: var(--vc-clr-white);
 }
 
 .anime-short-title {
-  margin-bottom: 10px;
-  font-size: 0.875rem;
-  color: var(--vc-clr-white);
+  margin: 0;
+  align-items: center;
 }
 
 .anime-post-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: var(--vc-clr-white);
-  background-color: var(--vc-clr-primary);
+  margin-top: 20px;
+  background-color: #1d4ed8; /* Tailwind blue-800 */
+  border-color: #1d4ed8; /* Tailwind blue-800 */
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .anime-post-button:hover {
-  background-color: #2563eb; /* Tailwind blue-700 */
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  transform: scale(1.05);
+}
+
+.anime-post-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5); /* Tailwind blue-500 */
 }
 
 @media (max-width: 768px) {
