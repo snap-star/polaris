@@ -157,6 +157,7 @@ export default {
   border-radius: 4px;
   z-index: 10;
   font-size: small;
+  pointer-events: none;
 }
 
 .hot-badge {
@@ -168,6 +169,7 @@ export default {
   padding: 2px 4px;
   border-radius: 4px;
   font-size: small;
+  pointer-events: none;
 }
 
 .status-badge {
@@ -179,6 +181,7 @@ export default {
   padding: 2px 4px;
   border-radius: 4px;
   font-size: small;
+  pointer-events: none;
 }
 
 .type-badge {
@@ -190,6 +193,7 @@ export default {
   padding: 2px 4px;
   border-radius: 4px;
   font-size: small;
+  pointer-events: none;
 }
 
 .pagination-controls {
