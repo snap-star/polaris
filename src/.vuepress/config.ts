@@ -1,9 +1,23 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 import { path } from "@vuepress/utils";
+import { commentPlugin } from '@vuepress/plugin-comment'
 
 export default defineUserConfig({
-    
+  //comment plugin
+  // plugins: [
+  //   commentPlugin({
+  //     provider: 'Giscus',
+  //     repo: 'https://github.com/snap-star/polaris/discussions',
+  //     repoId: 'R_kgDOL6QtLA',
+  //     category: 'General',
+  //     categoryId: 'DIC_kwDOL6QtLM4CgxMl',
+  //     lazyLoading: true,
+  //     reactionsEnabled: true,
+  //     inputPosition: "bottom",
+  //     mapping: "pathname",
+  //   })
+  // ],
   //head tag customize start
   head: [
     //import custom font

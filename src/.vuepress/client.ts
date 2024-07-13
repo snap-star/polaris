@@ -17,10 +17,15 @@ import AnimeInfo from "./components/AnimeInfo.vue"; //search anime info via api 
 import "vuepress-theme-hope/presets/bounce-icon.scss"; //effect bounce mouse on hover
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss"; //shining feature
 import { forceUpdate } from "@vuepress/plugin-pwa/client"; //setup force update when new content available
-import { onMounted } from "vue";
+import { createApp, onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
 import AnimeCarousel from "./components/AnimeCarousel.vue";
-import { createVuestic, VuesticPlugin } from "vuestic-ui";
+import * as ElementPlustIconsVue from '@element-plus/icons-vue'
+
+// const app = createApp(app)
+// for (const [key, component] of Object.entries(ElementPlustIconsVue)) {
+//     app.component(key, component)
+// }
 
 export default defineClientConfig({
   layouts: {
@@ -28,7 +33,6 @@ export default defineClientConfig({
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
   },
  enhance: ({  app, router, siteData }) => {
-    app.use(createVuestic());
     app.component("WordpressPost", WordpressPost);
     app.component("wpost", wpost);
     app.component("animeblog", animeblog);
@@ -57,7 +61,7 @@ export default defineClientConfig({
     //pwa config
     onMounted (() => {
       forceUpdate()
-    })
+    });
   },
   rootComponents: [],
 });

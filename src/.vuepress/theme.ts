@@ -1,9 +1,13 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { getCommentPlugin } from "vuepress-theme-hope";
+import { commentPlugin } from "@vuepress/plugin-comment";
 
 export default hopeTheme(
   {
+    //enable color picker
+    themeColor: true,
     //darkmode option
     darkmode: "toggle",
     //displaying fullscreen button
@@ -91,10 +95,12 @@ export default hopeTheme(
       // Install @waline/client before enabling it
       // Note: This is for testing ONLY!
       // You MUST generate and use your own comment service in production.
-      // comment: {
-      //  provider: "Waline",
-      //   serverURL: "https://waline-test-ashen-chi.vercel.app/",
-      // },
+      comment: {
+       provider: "Waline",
+        serverURL: "https://waline-test-ashen-chi.vercel.app/",
+        emoji: true,
+        pageview: true
+      },       
       search: true,
       components: {
         components: [

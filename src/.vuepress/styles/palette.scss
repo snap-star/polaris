@@ -1,5 +1,10 @@
 // you can change colors here
-$colors: #5c7aea !default;
+:root {
+  --theme-color: #5c7aea;
+}
+$theme-colors: #5c7aea;
+
+$color: #5c7aea;
 
 html[data-theme="dark"] {
   --navbar-bg-color: var(--theme-color-mask);
@@ -20,6 +25,9 @@ html[data-theme="light"] {
   .vp-footer-wrapper{
     background: #45474B;
     color: #F5F7F8;
+  }
+  .vp-nav-links{
+    color: var(--grey-dark);
   }
 }
 
