@@ -15,7 +15,7 @@ npm run docs:build
 npx vp-update
 ```
 
-## generate carousel
+## generate carousel banner
 ```
-npm run generate:anime-json
+npm run generate:carousel
 ```

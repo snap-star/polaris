@@ -21,6 +21,7 @@ import { createApp, onMounted } from "vue";
 import IframeLoader from "./components/IframeLoader.vue";
 import AnimeCarousel from "./components/AnimeCarousel.vue";
 import * as ElementPlustIconsVue from '@element-plus/icons-vue'
+import ElementPlus from 'element-plus'
 
 // const app = createApp(app)
 // for (const [key, component] of Object.entries(ElementPlustIconsVue)) {
@@ -33,6 +34,9 @@ export default defineClientConfig({
     AnimeLayout, AnimeDetail,AnimeSchedule, AnimeGrid, AnimeSearch,
   },
  enhance: ({  app, router, siteData }) => {
+    // createApp(app)
+    app.use(ElementPlus)
+    // app.mount('#app')
     app.component("WordpressPost", WordpressPost);
     app.component("wpost", wpost);
     app.component("animeblog", animeblog);
