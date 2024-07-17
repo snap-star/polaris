@@ -32,7 +32,7 @@
     "unplugin-vue-components": "^0.27.2",
     "vite-plugin-commonjs": "^0.10.1",
     "vite-plugin-external": "^4.3.1",
-    "vue": "^3.4.31",
+    "vue": "^3.4.32",
     "vuepress": "2.0.0-rc.14",
     "vuepress-theme-hope": "2.0.0-rc.51",
     "vuestic-ui": "^1.9.12"
