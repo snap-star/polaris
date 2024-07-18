@@ -54,7 +54,6 @@
     "dashjs": "^4.7.4",
     "date-fns": "^3.6.0",
     "element-plus": "^2.7.7",
-    "element-ui": "^2.15.14",
     "express": "^4.19.2",
     "firebase": "^10.12.2",
     "flowchart": "^1.2.0",
