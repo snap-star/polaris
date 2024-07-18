@@ -1,20 +1,15 @@
 // you can change colors here
-:root {
-  --theme-color: #5c7aea;
-}
-$theme-colors: #5c7aea;
-
-$color: #5c7aea;
+$theme-color: #5c7aea;
 
 html[data-theme="dark"] {
   --navbar-bg-color: var(--theme-color-mask);
-  --text-color: #EEEEEE;
+  --text-color: #eeeeee;
   --bg-color: #222831;
-  --sidebar-bg-color: #31363F;
+  --sidebar-bg-color: #31363f;
   --bg-color-blur: rgba(13, 17, 23, 0.7);
-  .vp-footer-wrapper{
-    background: #2F3645;
-    color: #F5F7F8;
+  .vp-footer-wrapper {
+    background: #2f3645;
+    color: #f5f7f8;
   }
 }
 
@@ -22,12 +17,24 @@ html[data-theme="light"] {
   --navbar-bg-color: var(--theme-color);
   --bg-color: #fafafa;
   --sidebar-bg-color: #f5f5f5;
-  .vp-footer-wrapper{
-    background: #45474B;
-    color: #F5F7F8;
-  }
-  .vp-nav-links{
-    color: var(--grey-dark);
+  .vp-footer-wrapper {
+    background: #45474b;
+    color: #f5f7f8;
+    .auto-link {
+      color: var(--text-color);
+    }
+    .auto-link.route-link-active {
+      color: ghostwhite;
+    }
+    .vp-dropdown-title {
+      color: var(--text-color);
+    }
+    .vp-outlook-button {
+      color: var(--text-color);
+    }
+    .vp-action-link {
+      color: var(--text-color);
+    }
   }
 }
 
